@@ -1,0 +1,1932 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <dbname>enwiki</dbname>
+    <base>https://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.28.0-wmf.18</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Wikipedia</namespace>
+      <namespace key="5" case="first-letter">Wikipedia talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="100" case="first-letter">Portal</namespace>
+      <namespace key="101" case="first-letter">Portal talk</namespace>
+      <namespace key="108" case="first-letter">Book</namespace>
+      <namespace key="109" case="first-letter">Book talk</namespace>
+      <namespace key="118" case="first-letter">Draft</namespace>
+      <namespace key="119" case="first-letter">Draft talk</namespace>
+      <namespace key="446" case="first-letter">Education Program</namespace>
+      <namespace key="447" case="first-letter">Education Program talk</namespace>
+      <namespace key="710" case="first-letter">TimedText</namespace>
+      <namespace key="711" case="first-letter">TimedText talk</namespace>
+      <namespace key="828" case="first-letter">Module</namespace>
+      <namespace key="829" case="first-letter">Module talk</namespace>
+      <namespace key="2300" case="first-letter">Gadget</namespace>
+      <namespace key="2301" case="first-letter">Gadget talk</namespace>
+      <namespace key="2302" case="case-sensitive">Gadget definition</namespace>
+      <namespace key="2303" case="case-sensitive">Gadget definition talk</namespace>
+      <namespace key="2600" case="first-letter">Topic</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>David Siegel (screenwriter)</title>
+    <ns>0</ns>
+    <id>19892204</id>
+    <revision>
+      <id>247013573</id>
+      <timestamp>2008-10-22T19:48:34Z</timestamp>
+      <contributor>
+        <username>Contributor7</username>
+        <id>4423907</id>
+      </contributor>
+      <comment>[[WP:AES|←]]Created page with ''''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].  Hi...'</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="540">'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].  His films include ''[[Suture]]'' (1994), ''[[The Deep End]]'' (2001), ''[[Bee Season (film)]]'' (2005) and ''[[Uncertainty (film)]]'' (2008).
+
+==External links==
+*{{imdb name|id=0796915|name=David Siegel}}
+
+[[Category:American film directors|Siegel, David]]
+[[Category:American screenwriters|Siegel, David]]
+[[Category:Living people|Siegel, David]]
+[[Category:Jewish-Americans]]</text>
+      <sha1>3ju6699hcmcn38y5qri707so7dz4e0e</sha1>
+    </revision>
+    <revision>
+      <id>247016347</id>
+      <parentid>247013573</parentid>
+      <timestamp>2008-10-22T20:01:52Z</timestamp>
+      <contributor>
+        <username>Contributor7</username>
+        <id>4423907</id>
+      </contributor>
+      <minor/>
+      <comment>added &quot;(film)&quot; to two film titles,  so that links will link correctly</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="554">'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].  His films include ''[[Suture (film)]]'' (1994), ''[[The Deep End (film)]]'' (2001), ''[[Bee Season (film)]]'' (2005) and ''[[Uncertainty (film)]]'' (2008).
+
+==External links==
+*{{imdb name|id=0796915|name=David Siegel}}
+
+[[Category:American film directors|Siegel, David]]
+[[Category:American screenwriters|Siegel, David]]
+[[Category:Living people|Siegel, David]]
+[[Category:Jewish-Americans]]</text>
+      <sha1>4y6m87z4kkea31bvzw8cxm8sdlvtu7a</sha1>
+    </revision>
+    <revision>
+      <id>247017916</id>
+      <parentid>247016347</parentid>
+      <timestamp>2008-10-22T20:08:47Z</timestamp>
+      <contributor>
+        <username>Contributor7</username>
+        <id>4423907</id>
+      </contributor>
+      <minor/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="597">'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].  His films include ''[[Suture (film)|Suture]]'' (1994), ''[[The Deep End (film)|The Deep End]]'' (2001), ''[[Bee Season (film)|Bee Season]]'' (2005) and ''[[Uncertainty (film)|Uncertainty]]'' (2008).
+
+==External links==
+*{{imdb name|id=0796915|name=David Siegel}}
+
+[[Category:American film directors|Siegel, David]]
+[[Category:American screenwriters|Siegel, David]]
+[[Category:Living people|Siegel, David]]
+[[Category:Jewish-Americans]]</text>
+      <sha1>5ej6156epxzl74ptt5glg67vtwd0afn</sha1>
+    </revision>
+    <revision>
+      <id>247123546</id>
+      <parentid>247017916</parentid>
+      <timestamp>2008-10-23T07:20:22Z</timestamp>
+      <contributor>
+        <username>RussBot</username>
+        <id>279219</id>
+      </contributor>
+      <minor/>
+      <comment>Robot: moving pages out of redirected category</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="594">'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].  His films include ''[[Suture (film)|Suture]]'' (1994), ''[[The Deep End (film)|The Deep End]]'' (2001), ''[[Bee Season (film)|Bee Season]]'' (2005) and ''[[Uncertainty (film)|Uncertainty]]'' (2008).
+
+==External links==
+*{{imdb name|id=0796915|name=David Siegel}}
+
+[[Category:American film directors|Siegel, David]]
+[[Category:American screenwriters|Siegel, David]]
+[[Category:Living people|Siegel, David]]
+[[Category:American Jews]]</text>
+      <sha1>aeq9t65z95hl7b3wpka1hvvfkxc9o23</sha1>
+    </revision>
+    <revision>
+      <id>251567607</id>
+      <parentid>247123546</parentid>
+      <timestamp>2008-11-13T15:21:46Z</timestamp>
+      <contributor>
+        <ip>207.144.99.125</ip>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="666">'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].  His films include ''[[Suture (film)|Suture]]'' (1994), ''[[The Deep End (film)|The Deep End]]'' (2001), ''[[Bee Season (film)|Bee Season]]'' (2005) and ''[[Uncertainty (film)|Uncertainty]]'' (2008).
+'''David Siegel''' is a billionaire that is the CEO of West Gate Resort.
+==External links==
+*{{imdb name|id=0796915|name=David Siegel}}
+
+[[Category:American film directors|Siegel, David]]
+[[Category:American screenwriters|Siegel, David]]
+[[Category:Living people|Siegel, David]]
+[[Category:American Jews]]</text>
+      <sha1>bqd3a9axrvbry4nw7uysgngjqmvoam0</sha1>
+    </revision>
+    <revision>
+      <id>252852404</id>
+      <parentid>251567607</parentid>
+      <timestamp>2008-11-19T20:57:29Z</timestamp>
+      <contributor>
+        <ip>69.200.246.188</ip>
+      </contributor>
+      <comment>deleted incorrect information</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="594">'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].  His films include ''[[Suture (film)|Suture]]'' (1994), ''[[The Deep End (film)|The Deep End]]'' (2001), ''[[Bee Season (film)|Bee Season]]'' (2005) and ''[[Uncertainty (film)|Uncertainty]]'' (2008).
+
+==External links==
+*{{imdb name|id=0796915|name=David Siegel}}
+
+[[Category:American film directors|Siegel, David]]
+[[Category:American screenwriters|Siegel, David]]
+[[Category:Living people|Siegel, David]]
+[[Category:American Jews]]</text>
+      <sha1>aeq9t65z95hl7b3wpka1hvvfkxc9o23</sha1>
+    </revision>
+    <revision>
+      <id>252853318</id>
+      <parentid>252852404</parentid>
+      <timestamp>2008-11-19T21:02:00Z</timestamp>
+      <contributor>
+        <ip>69.200.246.188</ip>
+      </contributor>
+      <comment>formatting changes, added some links</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="859">'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].  
+
+
+
+==Filmography==
+*''[[Suture (film)|Suture]]'' (1994)
+*''[[The Deep End (film)|The Deep End]]'' (2001)
+*''[[Bee Season (film)|Bee Season]]'' (2005)
+*''[[Uncertainty (film)|Uncertainty]]'' (2008)
+
+==Interviews==
+*[http://www.thefreelibrary.com/Identity+politics+at+face+value:+an+interview+with+Scott+McGehee+and...-a016010018/ Link to Cineaste interview: &quot;Identity Politics at Face Value&quot;] at The Free Library
+
+==External links==
+*{{imdb name|id=0796915|name=David Siegel}}
+
+[[Category:American film directors|Siegel, David]]
+[[Category:American screenwriters|Siegel, David]]
+[[Category:Living people|Siegel, David]]
+[[Category:People from Orange County, California]]
+[[Category:American Jews]]</text>
+      <sha1>caka9frw9nyi2guwl6j2q34ammikpm9</sha1>
+    </revision>
+    <revision>
+      <id>306620663</id>
+      <parentid>252853318</parentid>
+      <timestamp>2009-08-07T15:52:20Z</timestamp>
+      <contributor>
+        <username>All Hallow's Wraith</username>
+        <id>5044346</id>
+      </contributor>
+      <comment>/* External links */ rmv unsourced cat.</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="832">'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].  
+
+
+
+==Filmography==
+*''[[Suture (film)|Suture]]'' (1994)
+*''[[The Deep End (film)|The Deep End]]'' (2001)
+*''[[Bee Season (film)|Bee Season]]'' (2005)
+*''[[Uncertainty (film)|Uncertainty]]'' (2008)
+
+==Interviews==
+*[http://www.thefreelibrary.com/Identity+politics+at+face+value:+an+interview+with+Scott+McGehee+and...-a016010018/ Link to Cineaste interview: &quot;Identity Politics at Face Value&quot;] at The Free Library
+
+==External links==
+*{{imdb name|id=0796915|name=David Siegel}}
+
+[[Category:American film directors|Siegel, David]]
+[[Category:American screenwriters|Siegel, David]]
+[[Category:Living people|Siegel, David]]
+[[Category:People from Orange County, California]]</text>
+      <sha1>4r2rus3bw3jglbb5zsfanicrwx2vaor</sha1>
+    </revision>
+    <revision>
+      <id>361805842</id>
+      <parentid>306620663</parentid>
+      <timestamp>2010-05-13T02:25:40Z</timestamp>
+      <contributor>
+        <username>Jesi</username>
+        <id>7705292</id>
+      </contributor>
+      <comment>hint to [[David Siegel (musician)]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="883">{{For|the music producer|David Siegel (musician)}}
+
+
+'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].  
+
+==Filmography==
+*''[[Suture (film)|Suture]]'' (1994)
+*''[[The Deep End (film)|The Deep End]]'' (2001)
+*''[[Bee Season (film)|Bee Season]]'' (2005)
+*''[[Uncertainty (film)|Uncertainty]]'' (2008)
+
+==Interviews==
+*[http://www.thefreelibrary.com/Identity+politics+at+face+value:+an+interview+with+Scott+McGehee+and...-a016010018/ Link to Cineaste interview: &quot;Identity Politics at Face Value&quot;] at The Free Library
+
+==External links==
+*{{imdb name|id=0796915|name=David Siegel}}
+
+[[Category:American film directors|Siegel, David]]
+[[Category:American screenwriters|Siegel, David]]
+[[Category:Living people|Siegel, David]]
+[[Category:People from Orange County, California]]</text>
+      <sha1>om82pryuzl65su455f2oa5y0a9jae1v</sha1>
+    </revision>
+    <revision>
+      <id>472791570</id>
+      <parentid>361805842</parentid>
+      <timestamp>2012-01-23T12:40:19Z</timestamp>
+      <contributor>
+        <username>Rich Farmbrough</username>
+        <id>82835</id>
+      </contributor>
+      <minor/>
+      <comment>Metadata and general fixes using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="1052">{{For|the music producer|David Siegel (musician)}}
+
+'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].
+
+==Filmography==
+*''[[Suture (film)|Suture]]'' (1994)
+*''[[The Deep End (film)|The Deep End]]'' (2001)
+*''[[Bee Season (film)|Bee Season]]'' (2005)
+*''[[Uncertainty (film)|Uncertainty]]'' (2008)
+
+==Interviews==
+*[http://www.thefreelibrary.com/Identity+politics+at+face+value:+an+interview+with+Scott+McGehee+and...-a016010018/ Link to Cineaste interview: &quot;Identity Politics at Face Value&quot;] at The Free Library
+
+==External links==
+*{{IMDb name|id=0796915|name=David Siegel}}
+
+{{Persondata
+| name              = Siegel, David
+| alternative names =
+| short description =
+| date of birth     =
+| place of birth    =
+| date of death     =
+| place of death    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]</text>
+      <sha1>11vudgtt0y77d5tg89mss5fmk2ev3r9</sha1>
+    </revision>
+    <revision>
+      <id>509120897</id>
+      <parentid>472791570</parentid>
+      <timestamp>2012-08-25T18:14:43Z</timestamp>
+      <contributor>
+        <username>HuPi</username>
+        <id>7327467</id>
+      </contributor>
+      <minor/>
+      <comment>adds a reference to a person with the same name</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="1134">{{For|the music producer|David Siegel (musician)}}
+
+'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].
+
+not to be confused with David A. Siegel, founder and CEO of [[Westgate Resorts]].
+==Filmography==
+*''[[Suture (film)|Suture]]'' (1994)
+*''[[The Deep End (film)|The Deep End]]'' (2001)
+*''[[Bee Season (film)|Bee Season]]'' (2005)
+*''[[Uncertainty (film)|Uncertainty]]'' (2008)
+
+==Interviews==
+*[http://www.thefreelibrary.com/Identity+politics+at+face+value:+an+interview+with+Scott+McGehee+and...-a016010018/ Link to Cineaste interview: &quot;Identity Politics at Face Value&quot;] at The Free Library
+
+==External links==
+*{{IMDb name|id=0796915|name=David Siegel}}
+
+{{Persondata
+| name              = Siegel, David
+| alternative names =
+| short description =
+| date of birth     =
+| place of birth    =
+| date of death     =
+| place of death    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]</text>
+      <sha1>nlssezd8egzanaavqp6qa09knjiccbk</sha1>
+    </revision>
+    <revision>
+      <id>511874306</id>
+      <parentid>509120897</parentid>
+      <timestamp>2012-09-11T16:34:43Z</timestamp>
+      <contributor>
+        <ip>72.229.19.102</ip>
+      </contributor>
+      <comment>additional information in infobox, replaced dead interview with more recent</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="1567">{{Infobox person
+|name=David Siegel
+|birth_name=David Siegel
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+{{For|the music producer|David Siegel (musician)}}
+
+'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].
+
+(Not to be confused with David A. Siegel, founder and CEO of [[Westgate Resorts]].)
+==Filmography==
+*''[[Suture (film)|Suture]]'' (1994)
+*''[[The Deep End (film)|The Deep End]]'' (2001)
+*''[[Bee Season (film)|Bee Season]]'' (2005)
+*''[[Uncertainty (film)|Uncertainty]]'' (2008)
+*''[[What Maisie Knew (film)|What Maisie Knew]]'' (2012)
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;] 
+
+==External links==
+*{{IMDb name|id=0796915|name=David Siegel}}
+
+{{Persondata
+| name              = Siegel, David
+| alternative names =
+| short description =
+| date of birth     =
+| place of birth    =
+| date of death     =
+| place of death    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]</text>
+      <sha1>a1me1a9ggpr5ymjoz2syjzrep9inm0u</sha1>
+    </revision>
+    <revision>
+      <id>517251419</id>
+      <parentid>511874306</parentid>
+      <timestamp>2012-10-11T19:15:44Z</timestamp>
+      <contributor>
+        <ip>50.47.55.60</ip>
+      </contributor>
+      <comment>/* Filmography */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="1662">{{Infobox person
+|name=David Siegel
+|birth_name=David Siegel
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+{{For|the music producer|David Siegel (musician)}}
+
+'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].
+
+(Not to be confused with David A. Siegel, founder and CEO of [[Westgate Resorts]].)
+==Filmography==
+*''[[Suture (film)|Suture]]'' (1994)
+*''[[The Deep End (film)|The Deep End]]'' (2001)
+*''[[Bee Season (film)|Bee Season]]'' (2005)
+*''[[Uncertainty (film)|Uncertainty]]'' (2008)
+*''[[What Maisie Knew (film)|What Maisie Knew]]'' (2012)
+*''[[D-Bag who threatened his employees. (film)|D-Bag who threatened his employees.]]'' (2012)
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;] 
+
+==External links==
+*{{IMDb name|id=0796915|name=David Siegel}}
+
+{{Persondata
+| name              = Siegel, David
+| alternative names =
+| short description =
+| date of birth     =
+| place of birth    =
+| date of death     =
+| place of death    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]</text>
+      <sha1>p3clfst4dfnj4yk9ril3ohv21sf8umw</sha1>
+    </revision>
+    <revision>
+      <id>517251738</id>
+      <parentid>517251419</parentid>
+      <timestamp>2012-10-11T19:17:42Z</timestamp>
+      <contributor>
+        <username>Pjthepiano</username>
+        <id>12884975</id>
+      </contributor>
+      <comment>Undid revision 517251419 by [[Special:Contributions/50.47.55.60|50.47.55.60]] ([[User talk:50.47.55.60|talk]]) vandalism</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="1567">{{Infobox person
+|name=David Siegel
+|birth_name=David Siegel
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+{{For|the music producer|David Siegel (musician)}}
+
+'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].
+
+(Not to be confused with David A. Siegel, founder and CEO of [[Westgate Resorts]].)
+==Filmography==
+*''[[Suture (film)|Suture]]'' (1994)
+*''[[The Deep End (film)|The Deep End]]'' (2001)
+*''[[Bee Season (film)|Bee Season]]'' (2005)
+*''[[Uncertainty (film)|Uncertainty]]'' (2008)
+*''[[What Maisie Knew (film)|What Maisie Knew]]'' (2012)
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;] 
+
+==External links==
+*{{IMDb name|id=0796915|name=David Siegel}}
+
+{{Persondata
+| name              = Siegel, David
+| alternative names =
+| short description =
+| date of birth     =
+| place of birth    =
+| date of death     =
+| place of death    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]</text>
+      <sha1>a1me1a9ggpr5ymjoz2syjzrep9inm0u</sha1>
+    </revision>
+    <revision>
+      <id>523588083</id>
+      <parentid>517251738</parentid>
+      <timestamp>2012-11-18T00:50:23Z</timestamp>
+      <contributor>
+        <ip>85.81.82.15</ip>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="1571">{{Infobox person
+|name=David Siegel
+|birth_name=David Siegel
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+{{For|the music producer|David Siegel (musician)}}
+
+'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].
+
+(Not to be confused with [[David A. Siegel]], founder and CEO of [[Westgate Resorts]].)
+==Filmography==
+*''[[Suture (film)|Suture]]'' (1994)
+*''[[The Deep End (film)|The Deep End]]'' (2001)
+*''[[Bee Season (film)|Bee Season]]'' (2005)
+*''[[Uncertainty (film)|Uncertainty]]'' (2008)
+*''[[What Maisie Knew (film)|What Maisie Knew]]'' (2012)
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;] 
+
+==External links==
+*{{IMDb name|id=0796915|name=David Siegel}}
+
+{{Persondata
+| name              = Siegel, David
+| alternative names =
+| short description =
+| date of birth     =
+| place of birth    =
+| date of death     =
+| place of death    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]</text>
+      <sha1>fep0tzlf1xkizcqskofwpqag9hm8sjf</sha1>
+    </revision>
+    <revision>
+      <id>523601283</id>
+      <parentid>523588083</parentid>
+      <timestamp>2012-11-18T02:33:34Z</timestamp>
+      <contributor>
+        <username>WLU</username>
+        <id>2118749</id>
+      </contributor>
+      <minor/>
+      <comment>WLU moved page [[David Siegel]] to [[David Siegel (screenwriter)]]: Needs a DAB page</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="1571">{{Infobox person
+|name=David Siegel
+|birth_name=David Siegel
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+{{For|the music producer|David Siegel (musician)}}
+
+'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].
+
+(Not to be confused with [[David A. Siegel]], founder and CEO of [[Westgate Resorts]].)
+==Filmography==
+*''[[Suture (film)|Suture]]'' (1994)
+*''[[The Deep End (film)|The Deep End]]'' (2001)
+*''[[Bee Season (film)|Bee Season]]'' (2005)
+*''[[Uncertainty (film)|Uncertainty]]'' (2008)
+*''[[What Maisie Knew (film)|What Maisie Knew]]'' (2012)
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;] 
+
+==External links==
+*{{IMDb name|id=0796915|name=David Siegel}}
+
+{{Persondata
+| name              = Siegel, David
+| alternative names =
+| short description =
+| date of birth     =
+| place of birth    =
+| date of death     =
+| place of death    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]</text>
+      <sha1>fep0tzlf1xkizcqskofwpqag9hm8sjf</sha1>
+    </revision>
+    <revision>
+      <id>523601996</id>
+      <parentid>523601283</parentid>
+      <timestamp>2012-11-18T02:39:41Z</timestamp>
+      <contributor>
+        <username>WLU</username>
+        <id>2118749</id>
+      </contributor>
+      <comment>not the best hatnote, but...</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="1474">{{Infobox person
+|name=David Siegel
+|birth_name=David Siegel
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+{{otherpeople|David Siegel|David Siegel}}
+
+'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].
+
+==Filmography==
+*''[[Suture (film)|Suture]]'' (1994)
+*''[[The Deep End (film)|The Deep End]]'' (2001)
+*''[[Bee Season (film)|Bee Season]]'' (2005)
+*''[[Uncertainty (film)|Uncertainty]]'' (2008)
+*''[[What Maisie Knew (film)|What Maisie Knew]]'' (2012)
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;] 
+
+==External links==
+*{{IMDb name|id=0796915|name=David Siegel}}
+
+{{Persondata
+| name              = Siegel, David
+| alternative names =
+| short description =
+| date of birth     =
+| place of birth    =
+| date of death     =
+| place of death    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]</text>
+      <sha1>rin9h1v85bmqjh2mm810jfnsu03h2j6</sha1>
+    </revision>
+    <revision>
+      <id>528234448</id>
+      <parentid>523601996</parentid>
+      <timestamp>2012-12-16T00:35:31Z</timestamp>
+      <contributor>
+        <username>Ser Amantio di Nicolao</username>
+        <id>753665</id>
+      </contributor>
+      <comment>add category using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="1573">{{other people|David Siegel|David Siegel}}
+{{Infobox person
+|name=David Siegel
+|birth_name=David Siegel
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+
+'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].
+
+==Filmography==
+*''[[Suture (film)|Suture]]'' (1994)
+*''[[The Deep End (film)|The Deep End]]'' (2001)
+*''[[Bee Season (film)|Bee Season]]'' (2005)
+*''[[Uncertainty (film)|Uncertainty]]'' (2008)
+*''[[What Maisie Knew (film)|What Maisie Knew]]'' (2012)
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;]
+
+==External links==
+*{{IMDb name|id=0796915|name=David Siegel}}
+
+{{Persondata
+| NAME              = Siegel, David
+| ALTERNATIVE NAMES =
+| SHORT DESCRIPTION =
+| DATE OF BIRTH     =
+| PLACE OF BIRTH    = [[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+| DATE OF DEATH     =
+| PLACE OF DEATH    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]
+[[Category:Film directors from California]]</text>
+      <sha1>p3oc0wru9w6r2c9l3w708tw2navrlc1</sha1>
+    </revision>
+    <revision>
+      <id>546760773</id>
+      <parentid>528234448</parentid>
+      <timestamp>2013-03-24T17:13:14Z</timestamp>
+      <contributor>
+        <username>Waacstats</username>
+        <id>1951353</id>
+      </contributor>
+      <comment>Persondata</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="1595">{{other people|David Siegel|David Siegel}}
+{{Infobox person
+|name=David Siegel
+|birth_name=David Siegel
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+
+'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].
+
+==Filmography==
+*''[[Suture (film)|Suture]]'' (1994)
+*''[[The Deep End (film)|The Deep End]]'' (2001)
+*''[[Bee Season (film)|Bee Season]]'' (2005)
+*''[[Uncertainty (film)|Uncertainty]]'' (2008)
+*''[[What Maisie Knew (film)|What Maisie Knew]]'' (2012)
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;]
+
+==External links==
+*{{IMDb name|id=0796915|name=David Siegel}}
+
+{{Persondata
+| NAME              = Siegel, David
+| ALTERNATIVE NAMES =
+| SHORT DESCRIPTION = American screenwriter
+| DATE OF BIRTH     =
+| PLACE OF BIRTH    = [[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+| DATE OF DEATH     =
+| PLACE OF DEATH    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]
+[[Category:Film directors from California]]</text>
+      <sha1>gwd6jjx8ska049fgpvhzflq7e0non5i</sha1>
+    </revision>
+    <revision>
+      <id>553177396</id>
+      <parentid>546760773</parentid>
+      <timestamp>2013-05-02T10:23:07Z</timestamp>
+      <contributor>
+        <username>All Hallow's Wraith</username>
+        <id>5044346</id>
+      </contributor>
+      <minor/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="1575">{{other people|David Siegel|David Siegel}}
+{{Infobox person
+|name=David Siegel
+|birth_name=
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+
+'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]].
+
+==Filmography==
+*''[[Suture (film)|Suture]]'' (1994)
+*''[[The Deep End (film)|The Deep End]]'' (2001)
+*''[[Bee Season (film)|Bee Season]]'' (2005)
+*''[[Uncertainty (film)|Uncertainty]]'' (2008)
+*''[[What Maisie Knew (film)|What Maisie Knew]]'' (2012)
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;]
+
+==External links==
+*{{IMDb name|0796915|David Siegel}}
+
+{{Persondata
+| NAME              = Siegel, David
+| ALTERNATIVE NAMES =
+| SHORT DESCRIPTION = American screenwriter
+| DATE OF BIRTH     =
+| PLACE OF BIRTH    = [[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+| DATE OF DEATH     =
+| PLACE OF DEATH    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]
+[[Category:Film directors from California]]</text>
+      <sha1>7xf74fea65318zvl46nrqosi3jhy8s8</sha1>
+    </revision>
+    <revision>
+      <id>567739323</id>
+      <parentid>553177396</parentid>
+      <timestamp>2013-08-08T22:08:58Z</timestamp>
+      <contributor>
+        <ip>72.229.8.103</ip>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="1576">{{other people|David Siegel|David Siegel}}
+{{Infobox person
+|name=David Siegel
+|birth_name=
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+
+'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]]. 
+
+==Filmography==
+*''[[Suture (film)|Suture]]'' (1994)
+*''[[The Deep End (film)|The Deep End]]'' (2001)
+*''[[Bee Season (film)|Bee Season]]'' (2005)
+*''[[Uncertainty (film)|Uncertainty]]'' (2008)
+*''[[What Maisie Knew (film)|What Maisie Knew]]'' (2012)
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;]
+
+==External links==
+*{{IMDb name|0796915|David Siegel}}
+
+{{Persondata
+| NAME              = Siegel, David
+| ALTERNATIVE NAMES =
+| SHORT DESCRIPTION = American screenwriter
+| DATE OF BIRTH     =
+| PLACE OF BIRTH    = [[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+| DATE OF DEATH     =
+| PLACE OF DEATH    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]
+[[Category:Film directors from California]]</text>
+      <sha1>p3dv4hroa7qb8cwlnsiikpp3tq7jhbf</sha1>
+    </revision>
+    <revision>
+      <id>567860230</id>
+      <parentid>567739323</parentid>
+      <timestamp>2013-08-09T19:55:20Z</timestamp>
+      <contributor>
+        <username>R'n'B</username>
+        <id>2300502</id>
+      </contributor>
+      <minor/>
+      <comment>hatnote cleanup</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="1563">{{other people|David Siegel}}
+{{Infobox person
+|name=David Siegel
+|birth_name=
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+
+'''David Siegel''' is an American motion picture screenwriter and director, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]]. 
+
+==Filmography==
+*''[[Suture (film)|Suture]]'' (1994)
+*''[[The Deep End (film)|The Deep End]]'' (2001)
+*''[[Bee Season (film)|Bee Season]]'' (2005)
+*''[[Uncertainty (film)|Uncertainty]]'' (2008)
+*''[[What Maisie Knew (film)|What Maisie Knew]]'' (2012)
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;]
+
+==External links==
+*{{IMDb name|0796915|David Siegel}}
+
+{{Persondata
+| NAME              = Siegel, David
+| ALTERNATIVE NAMES =
+| SHORT DESCRIPTION = American screenwriter
+| DATE OF BIRTH     =
+| PLACE OF BIRTH    = [[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+| DATE OF DEATH     =
+| PLACE OF DEATH    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]
+[[Category:Film directors from California]]</text>
+      <sha1>nu3kd269plwb497gxf2lqtw8gaepish</sha1>
+    </revision>
+    <revision>
+      <id>641753593</id>
+      <parentid>567860230</parentid>
+      <timestamp>2015-01-09T17:16:28Z</timestamp>
+      <contributor>
+        <username>Camera-On</username>
+        <id>23733276</id>
+      </contributor>
+      <comment>fixed redundancy (motion picture film director/motion picture screenwriter),  filmograpyy into wikitable with additional films from imdb</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="2742">{{other people|David Siegel}}
+{{Infobox person
+|name=David Siegel
+|birth_name=
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+
+'''David Siegel''' is an American film director and screenwriter, and part of a long-standing writing-directing team with filmmaker [[Scott McGehee]]. 
+
+==Filmography==
+
+===Feature films===
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;font-size:100%;&quot;
+|-
+! rowspan=&quot;2&quot; style=&quot;width:50px;&quot;| Year
+! rowspan=&quot;2&quot; style=&quot;width:250px;&quot;| Film
+! colspan=&quot;3&quot; | Credited as
+! rowspan=&quot;2&quot;  style=&quot;text-align:center; width:150px;&quot;| Distribution
+|-
+! width=75 | Director
+! width=75 | Producer
+! width=75 | Writer
+
+|- style=&quot;text-align:center;&quot;
+|| 1994
+| style=&quot;text-align:left;&quot;| ''[[Suture (film)|Suture]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[Samuel Goldwyn Films|The Samuel Godwyn Company]]
+|- style=&quot;text-align:center;&quot;
+|| 2000
+| style=&quot;text-align:left;&quot;| ''Lush''
+| 
+| {{Yes}}
+| 
+||[[DEJ Productions]]
+|- style=&quot;text-align:center;&quot;
+|| 2001
+| style=&quot;text-align:left;&quot;| ''[[The Deep End (film)|The Deep End]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[Fox Searchlight Pictures]]
+|- style=&quot;text-align:center;&quot;
+|| 2001
+| style=&quot;text-align:left;&quot;| ''[[The Business of Strangers]]''
+| 
+| {{Yes|Executive}}
+| 
+||[[IFC Films]]
+|- style=&quot;text-align:center;&quot;
+|| 2005
+| style=&quot;text-align:left;&quot;| ''[[Bee Season (film)|Bee Season]]''
+| {{Yes}}
+| 
+| 
+||[[Fox Searchlight Pictures]]
+|- style=&quot;text-align:center;&quot;
+|| 2008
+| style=&quot;text-align:left;&quot;| ''[[Uncertainty (film)|Uncertainty]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[IFC Films]]
+|- style=&quot;text-align:center;&quot;
+|| 2012
+| style=&quot;text-align:left;&quot;| ''[[What Maisie Knew (film)|What Maisie Knew]]''
+| {{Yes}}
+| 
+| 
+| [[Alchemy (company)|Millennium Entertainment]]
+
+|-
+|}
+
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;]
+
+==External links==
+*{{IMDb name|0796915|David Siegel}}
+
+{{Persondata
+| NAME              = Siegel, David
+| ALTERNATIVE NAMES =
+| SHORT DESCRIPTION = American film director
+| DATE OF BIRTH     =
+| PLACE OF BIRTH    = [[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+| DATE OF DEATH     =
+| PLACE OF DEATH    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]
+[[Category:Film directors from California]]</text>
+      <sha1>3cpz57wb1e0cyzgeuy619jewm1l06pi</sha1>
+    </revision>
+    <revision>
+      <id>641753730</id>
+      <parentid>641753593</parentid>
+      <timestamp>2015-01-09T17:17:45Z</timestamp>
+      <contributor>
+        <username>Camera-On</username>
+        <id>23733276</id>
+      </contributor>
+      <comment>added producing to description, conforming with his credits</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="2765">{{other people|David Siegel}}
+{{Infobox person
+|name=David Siegel
+|birth_name=
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+
+'''David Siegel''' is an American film director and screenwriter and producer, and part of a long-standing writing-directing-producing team with filmmaker [[Scott McGehee]]. 
+
+==Filmography==
+
+===Feature films===
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;font-size:100%;&quot;
+|-
+! rowspan=&quot;2&quot; style=&quot;width:50px;&quot;| Year
+! rowspan=&quot;2&quot; style=&quot;width:250px;&quot;| Film
+! colspan=&quot;3&quot; | Credited as
+! rowspan=&quot;2&quot;  style=&quot;text-align:center; width:150px;&quot;| Distribution
+|-
+! width=75 | Director
+! width=75 | Producer
+! width=75 | Writer
+
+|- style=&quot;text-align:center;&quot;
+|| 1994
+| style=&quot;text-align:left;&quot;| ''[[Suture (film)|Suture]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[Samuel Goldwyn Films|The Samuel Godwyn Company]]
+|- style=&quot;text-align:center;&quot;
+|| 2000
+| style=&quot;text-align:left;&quot;| ''Lush''
+| 
+| {{Yes}}
+| 
+||[[DEJ Productions]]
+|- style=&quot;text-align:center;&quot;
+|| 2001
+| style=&quot;text-align:left;&quot;| ''[[The Deep End (film)|The Deep End]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[Fox Searchlight Pictures]]
+|- style=&quot;text-align:center;&quot;
+|| 2001
+| style=&quot;text-align:left;&quot;| ''[[The Business of Strangers]]''
+| 
+| {{Yes|Executive}}
+| 
+||[[IFC Films]]
+|- style=&quot;text-align:center;&quot;
+|| 2005
+| style=&quot;text-align:left;&quot;| ''[[Bee Season (film)|Bee Season]]''
+| {{Yes}}
+| 
+| 
+||[[Fox Searchlight Pictures]]
+|- style=&quot;text-align:center;&quot;
+|| 2008
+| style=&quot;text-align:left;&quot;| ''[[Uncertainty (film)|Uncertainty]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[IFC Films]]
+|- style=&quot;text-align:center;&quot;
+|| 2012
+| style=&quot;text-align:left;&quot;| ''[[What Maisie Knew (film)|What Maisie Knew]]''
+| {{Yes}}
+| 
+| 
+| [[Alchemy (company)|Millennium Entertainment]]
+
+|-
+|}
+
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;]
+
+==External links==
+*{{IMDb name|0796915|David Siegel}}
+
+{{Persondata
+| NAME              = Siegel, David
+| ALTERNATIVE NAMES =
+| SHORT DESCRIPTION = American film director
+| DATE OF BIRTH     =
+| PLACE OF BIRTH    = [[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+| DATE OF DEATH     =
+| PLACE OF DEATH    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]
+[[Category:Film directors from California]]</text>
+      <sha1>1igqwum74t1wbnzubpjujhm44kjkxqv</sha1>
+    </revision>
+    <revision>
+      <id>641758340</id>
+      <parentid>641753730</parentid>
+      <timestamp>2015-01-09T17:57:32Z</timestamp>
+      <contributor>
+        <username>Camera-On</username>
+        <id>23733276</id>
+      </contributor>
+      <minor/>
+      <comment>/* Interviews */  added Time Out interview</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="2963">{{other people|David Siegel}}
+{{Infobox person
+|name=David Siegel
+|birth_name=
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+
+'''David Siegel''' is an American film director and screenwriter and producer, and part of a long-standing writing-directing-producing team with filmmaker [[Scott McGehee]]. 
+
+==Filmography==
+
+===Feature films===
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;font-size:100%;&quot;
+|-
+! rowspan=&quot;2&quot; style=&quot;width:50px;&quot;| Year
+! rowspan=&quot;2&quot; style=&quot;width:250px;&quot;| Film
+! colspan=&quot;3&quot; | Credited as
+! rowspan=&quot;2&quot;  style=&quot;text-align:center; width:150px;&quot;| Distribution
+|-
+! width=75 | Director
+! width=75 | Producer
+! width=75 | Writer
+
+|- style=&quot;text-align:center;&quot;
+|| 1994
+| style=&quot;text-align:left;&quot;| ''[[Suture (film)|Suture]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[Samuel Goldwyn Films|The Samuel Godwyn Company]]
+|- style=&quot;text-align:center;&quot;
+|| 2000
+| style=&quot;text-align:left;&quot;| ''Lush''
+| 
+| {{Yes}}
+| 
+||[[DEJ Productions]]
+|- style=&quot;text-align:center;&quot;
+|| 2001
+| style=&quot;text-align:left;&quot;| ''[[The Deep End (film)|The Deep End]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[Fox Searchlight Pictures]]
+|- style=&quot;text-align:center;&quot;
+|| 2001
+| style=&quot;text-align:left;&quot;| ''[[The Business of Strangers]]''
+| 
+| {{Yes|Executive}}
+| 
+||[[IFC Films]]
+|- style=&quot;text-align:center;&quot;
+|| 2005
+| style=&quot;text-align:left;&quot;| ''[[Bee Season (film)|Bee Season]]''
+| {{Yes}}
+| 
+| 
+||[[Fox Searchlight Pictures]]
+|- style=&quot;text-align:center;&quot;
+|| 2008
+| style=&quot;text-align:left;&quot;| ''[[Uncertainty (film)|Uncertainty]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[IFC Films]]
+|- style=&quot;text-align:center;&quot;
+|| 2012
+| style=&quot;text-align:left;&quot;| ''[[What Maisie Knew (film)|What Maisie Knew]]''
+| {{Yes}}
+| 
+| 
+| [[Alchemy (company)|Millennium Entertainment]]
+
+|-
+|}
+
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;]
+*[http://http://www.timeout.com/newyork/film/tony-q-a-what-maisie-knews-scott-mcgehee-and-david-siegel/ Time Out New York interview: &quot;TONY Q&amp;A: What Maisie Knew’s Scott McGehee and David Siegel&quot;]
+
+==External links==
+*{{IMDb name|0796915|David Siegel}}
+
+{{Persondata
+| NAME              = Siegel, David
+| ALTERNATIVE NAMES =
+| SHORT DESCRIPTION = American film director
+| DATE OF BIRTH     =
+| PLACE OF BIRTH    = [[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+| DATE OF DEATH     =
+| PLACE OF DEATH    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]
+[[Category:Film directors from California]]</text>
+      <sha1>7877a4uq2hq36uslddu7i1px4iax7wl</sha1>
+    </revision>
+    <revision>
+      <id>641838792</id>
+      <parentid>641758340</parentid>
+      <timestamp>2015-01-10T06:51:57Z</timestamp>
+      <contributor>
+        <username>BG19bot</username>
+        <id>14508071</id>
+      </contributor>
+      <minor/>
+      <comment>[[WP:CHECKWIKI]] error fix for #93.  External link with double http:// Do [[Wikipedia:GENFIXES|general fixes]] if a problem exists. -, replaced: http://http:// → http:// using [[Project:AWB|AWB]] (10687)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="2954">{{other people|David Siegel}}
+{{Infobox person
+|name=David Siegel
+|birth_name=
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+
+'''David Siegel''' is an American film director and screenwriter and producer, and part of a long-standing writing-directing-producing team with filmmaker [[Scott McGehee]].
+
+==Filmography==
+
+===Feature films===
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;font-size:100%;&quot;
+|-
+! rowspan=&quot;2&quot; style=&quot;width:50px;&quot;| Year
+! rowspan=&quot;2&quot; style=&quot;width:250px;&quot;| Film
+! colspan=&quot;3&quot; | Credited as
+! rowspan=&quot;2&quot;  style=&quot;text-align:center; width:150px;&quot;| Distribution
+|-
+! width=75 | Director
+! width=75 | Producer
+! width=75 | Writer
+
+|- style=&quot;text-align:center;&quot;
+|| 1994
+| style=&quot;text-align:left;&quot;| ''[[Suture (film)|Suture]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[Samuel Goldwyn Films|The Samuel Godwyn Company]]
+|- style=&quot;text-align:center;&quot;
+|| 2000
+| style=&quot;text-align:left;&quot;| ''Lush''
+| 
+| {{Yes}}
+| 
+||[[DEJ Productions]]
+|- style=&quot;text-align:center;&quot;
+|| 2001
+| style=&quot;text-align:left;&quot;| ''[[The Deep End (film)|The Deep End]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[Fox Searchlight Pictures]]
+|- style=&quot;text-align:center;&quot;
+|| 2001
+| style=&quot;text-align:left;&quot;| ''[[The Business of Strangers]]''
+| 
+| {{Yes|Executive}}
+| 
+||[[IFC Films]]
+|- style=&quot;text-align:center;&quot;
+|| 2005
+| style=&quot;text-align:left;&quot;| ''[[Bee Season (film)|Bee Season]]''
+| {{Yes}}
+| 
+| 
+||[[Fox Searchlight Pictures]]
+|- style=&quot;text-align:center;&quot;
+|| 2008
+| style=&quot;text-align:left;&quot;| ''[[Uncertainty (film)|Uncertainty]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[IFC Films]]
+|- style=&quot;text-align:center;&quot;
+|| 2012
+| style=&quot;text-align:left;&quot;| ''[[What Maisie Knew (film)|What Maisie Knew]]''
+| {{Yes}}
+| 
+| 
+| [[Alchemy (company)|Millennium Entertainment]]
+
+|-
+|}
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;]
+*[http://www.timeout.com/newyork/film/tony-q-a-what-maisie-knews-scott-mcgehee-and-david-siegel/ Time Out New York interview: &quot;TONY Q&amp;A: What Maisie Knew’s Scott McGehee and David Siegel&quot;]
+
+==External links==
+*{{IMDb name|0796915|David Siegel}}
+
+{{Persondata
+| NAME              = Siegel, David
+| ALTERNATIVE NAMES =
+| SHORT DESCRIPTION = American film director
+| DATE OF BIRTH     =
+| PLACE OF BIRTH    = [[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+| DATE OF DEATH     =
+| PLACE OF DEATH    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]
+[[Category:Film directors from California]]</text>
+      <sha1>jhtiz7r3y8s0ww2ho2ctblnowptzrps</sha1>
+    </revision>
+    <revision>
+      <id>642324273</id>
+      <parentid>641838792</parentid>
+      <timestamp>2015-01-13T16:26:04Z</timestamp>
+      <contributor>
+        <ip>70.199.94.233</ip>
+      </contributor>
+      <comment>omitted redundant &quot;and&quot;</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="2951">{{other people|David Siegel}}
+{{Infobox person
+|name=David Siegel
+|birth_name=
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+
+'''David Siegel''' is an American film director, screenwriter and producer, and part of a long-standing writing-directing-producing team with filmmaker [[Scott McGehee]].
+
+==Filmography==
+
+===Feature films===
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;font-size:100%;&quot;
+|-
+! rowspan=&quot;2&quot; style=&quot;width:50px;&quot;| Year
+! rowspan=&quot;2&quot; style=&quot;width:250px;&quot;| Film
+! colspan=&quot;3&quot; | Credited as
+! rowspan=&quot;2&quot;  style=&quot;text-align:center; width:150px;&quot;| Distribution
+|-
+! width=75 | Director
+! width=75 | Producer
+! width=75 | Writer
+
+|- style=&quot;text-align:center;&quot;
+|| 1994
+| style=&quot;text-align:left;&quot;| ''[[Suture (film)|Suture]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[Samuel Goldwyn Films|The Samuel Godwyn Company]]
+|- style=&quot;text-align:center;&quot;
+|| 2000
+| style=&quot;text-align:left;&quot;| ''Lush''
+| 
+| {{Yes}}
+| 
+||[[DEJ Productions]]
+|- style=&quot;text-align:center;&quot;
+|| 2001
+| style=&quot;text-align:left;&quot;| ''[[The Deep End (film)|The Deep End]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[Fox Searchlight Pictures]]
+|- style=&quot;text-align:center;&quot;
+|| 2001
+| style=&quot;text-align:left;&quot;| ''[[The Business of Strangers]]''
+| 
+| {{Yes|Executive}}
+| 
+||[[IFC Films]]
+|- style=&quot;text-align:center;&quot;
+|| 2005
+| style=&quot;text-align:left;&quot;| ''[[Bee Season (film)|Bee Season]]''
+| {{Yes}}
+| 
+| 
+||[[Fox Searchlight Pictures]]
+|- style=&quot;text-align:center;&quot;
+|| 2008
+| style=&quot;text-align:left;&quot;| ''[[Uncertainty (film)|Uncertainty]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[IFC Films]]
+|- style=&quot;text-align:center;&quot;
+|| 2012
+| style=&quot;text-align:left;&quot;| ''[[What Maisie Knew (film)|What Maisie Knew]]''
+| {{Yes}}
+| 
+| 
+| [[Alchemy (company)|Millennium Entertainment]]
+
+|-
+|}
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;]
+*[http://www.timeout.com/newyork/film/tony-q-a-what-maisie-knews-scott-mcgehee-and-david-siegel/ Time Out New York interview: &quot;TONY Q&amp;A: What Maisie Knew’s Scott McGehee and David Siegel&quot;]
+
+==External links==
+*{{IMDb name|0796915|David Siegel}}
+
+{{Persondata
+| NAME              = Siegel, David
+| ALTERNATIVE NAMES =
+| SHORT DESCRIPTION = American film director
+| DATE OF BIRTH     =
+| PLACE OF BIRTH    = [[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+| DATE OF DEATH     =
+| PLACE OF DEATH    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]
+[[Category:Film directors from California]]</text>
+      <sha1>mklr857vh4fcj677t4r25ls19hbq6dp</sha1>
+    </revision>
+    <revision>
+      <id>658118055</id>
+      <parentid>642324273</parentid>
+      <timestamp>2015-04-22T04:45:50Z</timestamp>
+      <contributor>
+        <username>Ser Amantio di Nicolao</username>
+        <id>753665</id>
+      </contributor>
+      <comment>/* External links */recat using [[Project:AWB|AWB]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="2956">{{other people|David Siegel}}
+{{Infobox person
+|name=David Siegel
+|birth_name=
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+
+'''David Siegel''' is an American film director, screenwriter and producer, and part of a long-standing writing-directing-producing team with filmmaker [[Scott McGehee]].
+
+==Filmography==
+
+===Feature films===
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;font-size:100%;&quot;
+|-
+! rowspan=&quot;2&quot; style=&quot;width:50px;&quot;| Year
+! rowspan=&quot;2&quot; style=&quot;width:250px;&quot;| Film
+! colspan=&quot;3&quot; | Credited as
+! rowspan=&quot;2&quot;  style=&quot;text-align:center; width:150px;&quot;| Distribution
+|-
+! width=75 | Director
+! width=75 | Producer
+! width=75 | Writer
+
+|- style=&quot;text-align:center;&quot;
+|| 1994
+| style=&quot;text-align:left;&quot;| ''[[Suture (film)|Suture]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[Samuel Goldwyn Films|The Samuel Godwyn Company]]
+|- style=&quot;text-align:center;&quot;
+|| 2000
+| style=&quot;text-align:left;&quot;| ''Lush''
+| 
+| {{Yes}}
+| 
+||[[DEJ Productions]]
+|- style=&quot;text-align:center;&quot;
+|| 2001
+| style=&quot;text-align:left;&quot;| ''[[The Deep End (film)|The Deep End]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[Fox Searchlight Pictures]]
+|- style=&quot;text-align:center;&quot;
+|| 2001
+| style=&quot;text-align:left;&quot;| ''[[The Business of Strangers]]''
+| 
+| {{Yes|Executive}}
+| 
+||[[IFC Films]]
+|- style=&quot;text-align:center;&quot;
+|| 2005
+| style=&quot;text-align:left;&quot;| ''[[Bee Season (film)|Bee Season]]''
+| {{Yes}}
+| 
+| 
+||[[Fox Searchlight Pictures]]
+|- style=&quot;text-align:center;&quot;
+|| 2008
+| style=&quot;text-align:left;&quot;| ''[[Uncertainty (film)|Uncertainty]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[IFC Films]]
+|- style=&quot;text-align:center;&quot;
+|| 2012
+| style=&quot;text-align:left;&quot;| ''[[What Maisie Knew (film)|What Maisie Knew]]''
+| {{Yes}}
+| 
+| 
+| [[Alchemy (company)|Millennium Entertainment]]
+
+|-
+|}
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;]
+*[http://www.timeout.com/newyork/film/tony-q-a-what-maisie-knews-scott-mcgehee-and-david-siegel/ Time Out New York interview: &quot;TONY Q&amp;A: What Maisie Knew’s Scott McGehee and David Siegel&quot;]
+
+==External links==
+*{{IMDb name|0796915|David Siegel}}
+
+{{Persondata
+| NAME              = Siegel, David
+| ALTERNATIVE NAMES =
+| SHORT DESCRIPTION = American film director
+| DATE OF BIRTH     =
+| PLACE OF BIRTH    = [[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+| DATE OF DEATH     =
+| PLACE OF DEATH    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American male screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]
+[[Category:Film directors from California]]</text>
+      <sha1>2qu6tdelhkg39e9dscjimrw6pinryh6</sha1>
+    </revision>
+    <revision>
+      <id>664515402</id>
+      <parentid>658118055</parentid>
+      <timestamp>2015-05-29T04:18:51Z</timestamp>
+      <contributor>
+        <username>Ekabhishek</username>
+        <id>1738140</id>
+      </contributor>
+      <comment>added [[Category:American film producers]] using [[WP:HC|HotCat]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="2993">{{other people|David Siegel}}
+{{Infobox person
+|name=David Siegel
+|birth_name=
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+
+'''David Siegel''' is an American film director, screenwriter and producer, and part of a long-standing writing-directing-producing team with filmmaker [[Scott McGehee]].
+
+==Filmography==
+
+===Feature films===
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;font-size:100%;&quot;
+|-
+! rowspan=&quot;2&quot; style=&quot;width:50px;&quot;| Year
+! rowspan=&quot;2&quot; style=&quot;width:250px;&quot;| Film
+! colspan=&quot;3&quot; | Credited as
+! rowspan=&quot;2&quot;  style=&quot;text-align:center; width:150px;&quot;| Distribution
+|-
+! width=75 | Director
+! width=75 | Producer
+! width=75 | Writer
+
+|- style=&quot;text-align:center;&quot;
+|| 1994
+| style=&quot;text-align:left;&quot;| ''[[Suture (film)|Suture]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[Samuel Goldwyn Films|The Samuel Godwyn Company]]
+|- style=&quot;text-align:center;&quot;
+|| 2000
+| style=&quot;text-align:left;&quot;| ''Lush''
+| 
+| {{Yes}}
+| 
+||[[DEJ Productions]]
+|- style=&quot;text-align:center;&quot;
+|| 2001
+| style=&quot;text-align:left;&quot;| ''[[The Deep End (film)|The Deep End]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[Fox Searchlight Pictures]]
+|- style=&quot;text-align:center;&quot;
+|| 2001
+| style=&quot;text-align:left;&quot;| ''[[The Business of Strangers]]''
+| 
+| {{Yes|Executive}}
+| 
+||[[IFC Films]]
+|- style=&quot;text-align:center;&quot;
+|| 2005
+| style=&quot;text-align:left;&quot;| ''[[Bee Season (film)|Bee Season]]''
+| {{Yes}}
+| 
+| 
+||[[Fox Searchlight Pictures]]
+|- style=&quot;text-align:center;&quot;
+|| 2008
+| style=&quot;text-align:left;&quot;| ''[[Uncertainty (film)|Uncertainty]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[IFC Films]]
+|- style=&quot;text-align:center;&quot;
+|| 2012
+| style=&quot;text-align:left;&quot;| ''[[What Maisie Knew (film)|What Maisie Knew]]''
+| {{Yes}}
+| 
+| 
+| [[Alchemy (company)|Millennium Entertainment]]
+
+|-
+|}
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;]
+*[http://www.timeout.com/newyork/film/tony-q-a-what-maisie-knews-scott-mcgehee-and-david-siegel/ Time Out New York interview: &quot;TONY Q&amp;A: What Maisie Knew’s Scott McGehee and David Siegel&quot;]
+
+==External links==
+*{{IMDb name|0796915|David Siegel}}
+
+{{Persondata
+| NAME              = Siegel, David
+| ALTERNATIVE NAMES =
+| SHORT DESCRIPTION = American film director
+| DATE OF BIRTH     =
+| PLACE OF BIRTH    = [[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+| DATE OF DEATH     =
+| PLACE OF DEATH    =
+}}
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American male screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]
+[[Category:Film directors from California]]
+[[Category:American film producers]]</text>
+      <sha1>4b9q33d185xlgtf3nt6tg3tf2l95wl5</sha1>
+    </revision>
+    <revision>
+      <id>715358073</id>
+      <parentid>664515402</parentid>
+      <timestamp>2016-04-15T08:34:16Z</timestamp>
+      <contributor>
+        <username>KasparBot</username>
+        <id>24420788</id>
+      </contributor>
+      <comment>migrating [[Wikipedia:Persondata|Persondata]] to Wikidata, [[toollabs:kasparbot/persondata/|please help]], see [[toollabs:kasparbot/persondata/challenge.php/article/David Siegel (screenwriter)|challenges for this article]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="2731">{{other people|David Siegel}}
+{{Infobox person
+|name=David Siegel
+|birth_name=
+|birth_date=
+|birth_place=[[Brooklyn]], [[New York (U.S. state)|New York]], U.S.
+|nationality=American
+|education  = [[University of California, Berkeley]]
+|residence = [[New York City, New York]]
+|years_active = 1993–present
+|occupation=[[Film Director]], Producer, Screenwriter
+}}
+
+'''David Siegel''' is an American film director, screenwriter and producer, and part of a long-standing writing-directing-producing team with filmmaker [[Scott McGehee]].
+
+==Filmography==
+
+===Feature films===
+{| class=&quot;wikitable&quot; style=&quot;text-align:center;font-size:100%;&quot;
+|-
+! rowspan=&quot;2&quot; style=&quot;width:50px;&quot;| Year
+! rowspan=&quot;2&quot; style=&quot;width:250px;&quot;| Film
+! colspan=&quot;3&quot; | Credited as
+! rowspan=&quot;2&quot;  style=&quot;text-align:center; width:150px;&quot;| Distribution
+|-
+! width=75 | Director
+! width=75 | Producer
+! width=75 | Writer
+
+|- style=&quot;text-align:center;&quot;
+|| 1994
+| style=&quot;text-align:left;&quot;| ''[[Suture (film)|Suture]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[Samuel Goldwyn Films|The Samuel Godwyn Company]]
+|- style=&quot;text-align:center;&quot;
+|| 2000
+| style=&quot;text-align:left;&quot;| ''Lush''
+| 
+| {{Yes}}
+| 
+||[[DEJ Productions]]
+|- style=&quot;text-align:center;&quot;
+|| 2001
+| style=&quot;text-align:left;&quot;| ''[[The Deep End (film)|The Deep End]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[Fox Searchlight Pictures]]
+|- style=&quot;text-align:center;&quot;
+|| 2001
+| style=&quot;text-align:left;&quot;| ''[[The Business of Strangers]]''
+| 
+| {{Yes|Executive}}
+| 
+||[[IFC Films]]
+|- style=&quot;text-align:center;&quot;
+|| 2005
+| style=&quot;text-align:left;&quot;| ''[[Bee Season (film)|Bee Season]]''
+| {{Yes}}
+| 
+| 
+||[[Fox Searchlight Pictures]]
+|- style=&quot;text-align:center;&quot;
+|| 2008
+| style=&quot;text-align:left;&quot;| ''[[Uncertainty (film)|Uncertainty]]''
+| {{Yes}}
+| {{Yes}}
+| {{Yes}}
+||[[IFC Films]]
+|- style=&quot;text-align:center;&quot;
+|| 2012
+| style=&quot;text-align:left;&quot;| ''[[What Maisie Knew (film)|What Maisie Knew]]''
+| {{Yes}}
+| 
+| 
+| [[Alchemy (company)|Millennium Entertainment]]
+
+|-
+|}
+
+==Interviews==
+*[http://www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/ Filmmaker Magazine interview: &quot;David Siegel and Scott McGehee, 'Uncertainty'&quot;]
+*[http://www.timeout.com/newyork/film/tony-q-a-what-maisie-knews-scott-mcgehee-and-david-siegel/ Time Out New York interview: &quot;TONY Q&amp;A: What Maisie Knew’s Scott McGehee and David Siegel&quot;]
+
+==External links==
+*{{IMDb name|0796915|David Siegel}}
+
+{{DEFAULTSORT:Siegel, David}}
+[[Category:American film directors]]
+[[Category:American male screenwriters]]
+[[Category:Living people]]
+[[Category:People from Orange County, California]]
+[[Category:University of California, Berkeley alumni]]
+[[Category:Film directors from California]]
+[[Category:American film producers]]</text>
+      <sha1>39ifgotr136b5vc3092fa8k71eqtysb</sha1>
+    </revision>
+  </page>
+</mediawiki>
