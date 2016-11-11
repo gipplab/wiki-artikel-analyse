@@ -3,7 +3,7 @@ package ao.thesis.wikianalyse;
 import org.junit.Assert;
 import org.junit.Test;
 
-import ao.thesis.wikianalyse.judgementation.TextJudger;
+import ao.thesis.wikianalyse.judger.TextJudger;
 
 public class TextJudgerTest{
 
