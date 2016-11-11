@@ -1,0 +1,157 @@
+"Content","ID of source revision","Named Entity","Reference","Markup","Position (MathToken)"
+"""David""","247017916","PERSON","","bold","/"
+"""Siegel""","247017916","PERSON","","bold","/"
+"""is""","0","O","","text","/"
+"""an""","0","O","","text","/"
+"""American""","247017916","O","","text","/"
+"""motion""","247017916","O","","text","/"
+"""picture""","247017916","O","","text","/"
+"""screenwriter""","247017916","O","","text","/"
+"""and""","0","O","","text","/"
+"""director""","247017916","O","","text","/"
+""",""","247017916","O","","text","/"
+"""and""","0","O","","text","/"
+"""part""","0","O","","text","/"
+"""of""","0","O","","text","/"
+"""a""","0","O","","text","/"
+"""long""","247017916","O","","text","/"
+"""-""","247017916","O","","text","/"
+"""standing""","247017916","O","","text","/"
+"""writing""","247017916","O","","text","/"
+"""-""","247017916","O","","text","/"
+"""directing""","247017916","O","","text","/"
+"""team""","247017916","O","","text","/"
+"""with""","0","O","","text","/"
+"""filmmaker""","247017916","O","","text","/"
+"""Scott""","247017916","PERSON","Scott McGehee","link","/"
+"""McGehee""","247017916","PERSON","Scott McGehee","link","/"
+""".""","247017916","O","","text","/"
+"""(""","511874306","O","","text","/"
+"""Not""","511874306","O","","text","/"
+"""to""","0","O","","text","/"
+"""be""","0","O","","text","/"
+"""confused""","509120897","O","","text","/"
+"""with""","0","O","","text","/"
+"""David""","509120897","PERSON","","text","/"
+"""A""","509120897","PERSON","","text","/"
+""".""","509120897","O","","text","/"
+"""Siegel""","509120897","PERSON","","text","/"
+""",""","509120897","O","","text","/"
+"""founder""","509120897","O","","text","/"
+"""and""","0","O","","text","/"
+"""CEO""","509120897","O","","text","/"
+"""of""","0","O","","text","/"
+"""Westgate""","509120897","ORGANIZATION","Westgate Resorts","link","/"
+"""Resorts""","509120897","ORGANIZATION","Westgate Resorts","link","/"
+""".""","247017916","O","","text","/"
+""")""","511874306","O","","text","/"
+"""1""","252853318","O","","header","/"
+""".""","252853318","O","","header","/"
+"""Filmography""","252853318","O","","header","/"
+"""Suture""","247017916","O","Suture (film)","link","/"
+"""(""","247017916","O","","text","/"
+"""1994""","247017916","O","","text","/"
+""")""","247017916","O","","text","/"
+"""The""","247017916","O","The Deep End (film)","link","/"
+"""Deep""","247017916","O","The Deep End (film)","link","/"
+"""End""","247017916","O","The Deep End (film)","link","/"
+"""(""","247017916","O","","text","/"
+"""2001""","247017916","O","","text","/"
+""")""","247017916","O","","text","/"
+"""Bee""","247017916","O","Bee Season (film)","link","/"
+"""Season""","247017916","O","Bee Season (film)","link","/"
+"""(""","247017916","O","","text","/"
+"""2005""","247017916","O","","text","/"
+""")""","247017916","O","","text","/"
+"""Uncertainty""","247017916","O","Uncertainty (film)","link","/"
+"""(""","247017916","O","","text","/"
+"""2008""","247017916","O","","text","/"
+""")""","247017916","O","","text","/"
+"""What""","511874306","O","What Maisie Knew (film)","link","/"
+"""Maisie""","511874306","PERSON","What Maisie Knew (film)","link","/"
+"""Knew""","511874306","PERSON","What Maisie Knew (film)","link","/"
+"""(""","511874306","O","","text","/"
+"""2012""","511874306","O","","text","/"
+""")""","247017916","O","","text","/"
+"""D""","517251419","O","D-Bag who threatened his employees. (film)","link","/"
+"""-""","517251419","O","D-Bag who threatened his employees. (film)","link","/"
+"""Bag""","517251419","O","D-Bag who threatened his employees. (film)","link","/"
+"""who""","0","O","D-Bag who threatened his employees. (film)","link","/"
+"""threatened""","517251419","O","D-Bag who threatened his employees. (film)","link","/"
+"""his""","0","O","D-Bag who threatened his employees. (film)","link","/"
+"""employees""","517251419","O","D-Bag who threatened his employees. (film)","link","/"
+""".""","517251419","O","D-Bag who threatened his employees. (film)","link","/"
+"""(""","511874306","O","","text","/"
+"""2012""","511874306","O","","text","/"
+""")""","247017916","O","","text","/"
+"""2""","252853318","O","","header","/"
+""".""","252853318","O","","header","/"
+"""Interviews""","252853318","O","","header","/"
+"""Filmmaker""","511874306","O","http:
+//www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/
+Filmmaker","extern","/"
+"""Magazine""","511874306","O","http:
+//www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/
+Filmmaker","extern","/"
+"""interview""","252853318","O","http:
+//www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/
+Filmmaker","extern","/"
+""":""","252853318","O","http:
+//www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/
+Filmmaker","extern","/"
+"""""""","252853318","O","http:
+//www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/
+Filmmaker","extern","/"
+"""David""","511874306","PERSON","http:
+//www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/
+Filmmaker","extern","/"
+"""Siegel""","511874306","PERSON","http:
+//www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/
+Filmmaker","extern","/"
+"""and""","0","O","http:
+//www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/
+Filmmaker","extern","/"
+"""Scott""","511874306","PERSON","http:
+//www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/
+Filmmaker","extern","/"
+"""McGehee""","511874306","PERSON","http:
+//www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/
+Filmmaker","extern","/"
+""",""","511874306","O","http:
+//www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/
+Filmmaker","extern","/"
+"""'""","511874306","O","http:
+//www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/
+Filmmaker","extern","/"
+"""Uncertainty""","511874306","O","http:
+//www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/
+Filmmaker","extern","/"
+"""'""","511874306","O","http:
+//www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/
+Filmmaker","extern","/"
+"""""""","511874306","O","http:
+//www.filmmakermagazine.com/news/2009/11/david-siegel-and-scott-mcgehee-uncertainty/
+Filmmaker","extern","/"
+"""3""","252853318","O","","header","/"
+""".""","247017916","O","","header","/"
+"""External""","247017916","O","","header","/"
+"""links""","247017916","O","","header","/"
+"""American""","472791570","O","American film directors","category","/"
+"""film""","472791570","O","American film directors","category","/"
+"""directors""","472791570","O","American film directors","category","/"
+"""American""","472791570","O","American screenwriters","category","/"
+"""screenwriters""","472791570","O","American screenwriters","category","/"
+"""Living""","472791570","O","Living people","category","/"
+"""people""","472791570","O","Living people","category","/"
+"""People""","252853318","O","People from Orange County, California","category","/"
+"""from""","0","O","People from Orange County, California","category","/"
+"""Orange""","252853318","LOCATION","People from Orange County, California","category","/"
+"""County""","252853318","LOCATION","People from Orange County, California","category","/"
+""",""","252853318","O","People from Orange County, California","category","/"
+"""California""","511874306","ORGANIZATION","People from Orange County, California","category","/"
+"""University""","511874306","ORGANIZATION","University of California, Berkeley alumni","category","/"
+"""of""","0","ORGANIZATION","University of California, Berkeley alumni","category","/"
+"""California""","511874306","ORGANIZATION","University of California, Berkeley alumni","category","/"
+""",""","511874306","ORGANIZATION","University of California, Berkeley alumni","category","/"
+"""Berkeley""","511874306","ORGANIZATION","University of California, Berkeley alumni","category","/"
+"""alumni""","511874306","O","University of California, Berkeley alumni","category","/"
