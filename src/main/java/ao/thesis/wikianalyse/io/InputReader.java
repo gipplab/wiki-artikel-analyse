@@ -97,7 +97,7 @@ public class InputReader {
 				for(File file : inputFiles){
 					logger.info("Read file: " + file.getName()+".");
 					stream = new FileInputStream(file);
-					reader = new DumpReaderExtension(stream, logger, dir);
+					reader = new DumpReaderExtension(stream, logger, dir+"/"+file.getName());
 					reader.unmarshal();
 				}
 			} finally {
@@ -129,22 +129,30 @@ public class InputReader {
 			
 			Page page = converter.convertPage(item);
 			
-			String title = page.getTitle();
-			
-			PageId id = new PageId(PageTitle.make(config, title), -1);
-			
-			filterAndProcessRevisions(page, id);
-			
-			pageInfos.put(title, id);
-			
-			languages.put(title, getLanguage(mediaWiki));
+			if(page.getNamespace().equals(BigInteger.valueOf(0))){
+				
+				String title = page.getTitle();
+				
+				PageId id = new PageId(PageTitle.make(config, title), -1);
+				
+				filterAndProcessRevisions(page, id);
+				
+				pageInfos.put(title, id);
+				
+				languages.put(title, getLanguage(mediaWiki));
+				
+			} else if (page.getNamespace().equals(BigInteger.valueOf(2))){
+				
+				//TODO userpages
+				
+			}
 		}
 		
 		private String getLanguage(Object mediaWiki){
 			
 			if (mediaWiki instanceof org.sweble.wikitext.dumpreader.export_0_5.MediaWikiType)
 				return ((org.sweble.wikitext.dumpreader.export_0_5.MediaWikiType) mediaWiki).getLang();
-
+				
 			else if (mediaWiki instanceof org.sweble.wikitext.dumpreader.export_0_6.MediaWikiType)
 				return ((org.sweble.wikitext.dumpreader.export_0_6.MediaWikiType) mediaWiki).getLang();
 
