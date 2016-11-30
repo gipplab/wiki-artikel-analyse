@@ -20,114 +20,195 @@ package ao.thesis.wikianalyse.io;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.sweble.wikitext.dumpreader.DumpReader;
-import org.sweble.wikitext.dumpreader.export_0_10.PageType;
-import org.sweble.wikitext.dumpreader.export_0_10.RevisionType;
+import org.sweble.wikitext.dumpreader.model.DumpConverter;
+import org.sweble.wikitext.dumpreader.model.Page;
+import org.sweble.wikitext.engine.EngineException;
+import org.sweble.wikitext.engine.PageId;
+import org.sweble.wikitext.engine.PageTitle;
+import org.sweble.wikitext.engine.WtEngineImpl;
+import org.sweble.wikitext.engine.config.WikiConfig;
+import org.sweble.wikitext.engine.nodes.EngProcessedPage;
+import org.sweble.wikitext.engine.utils.DefaultConfigEnWp;
+
+import ao.thesis.wikianalyse.model.RevisionID;
+import ao.thesis.wikianalyse.model.WikiOrga;
+import ao.thesis.wikianalyse.model.WikiOrgaImpl;
+
+import org.sweble.wikitext.dumpreader.model.Contributor;
+
 
 public class InputReader {
 	
-	private static InputReader inputReader = new InputReader();
-	
 	private static Logger logger = Logger.getLogger(InputReader.class);
 	
-	private List<Object> pages = new ArrayList<Object>();
+	private static WikiConfig config = DefaultConfigEnWp.generate();
 	
-	public static InputReader getInputReader(){
-		return inputReader;
-		}
-
-	private InputReader(){}
+	private static WtEngineImpl engine = new WtEngineImpl(config);
 	
 	
-	public List<Object> read(String inputDir) 
-			throws Exception
-	{
-		File[] inputFiles = new File(inputDir).listFiles();
+	private Map<RevisionID, EngProcessedPage> engProcessedPages = new HashMap<RevisionID, EngProcessedPage>();
+	
+//	private Map<Contributor, List<RevisionID>> editors = new HashMap<Contributor, List<RevisionID>>();
+	
+	private Map<BigInteger, List<RevisionID>> registredEditors = new HashMap<BigInteger, List<RevisionID>>();
+	
+	private Map<String, PageId> pageInfos = new HashMap<String, PageId>();
+	
+	//TODO language usage
+	private Map<String, String> languages = new HashMap<String, String>();
+	
+	
+	public InputReader(String dir) throws Exception {
+		read(dir);
+	}
+	
+	public WikiOrga getWikiOrga(){
+		
+		WikiOrgaImpl orga = new WikiOrgaImpl();
+		
+		orga.setRevisionIDs(engProcessedPages.keySet());
+		
+		orga.setPageTitleAndId(pageInfos);
+		
+//		orga.setEditors(registredEditors);
+		
+		orga.setEngProcessedPages(engProcessedPages);
+		
+		return orga;
+	}
+	
+	private void read(String dir) throws Exception {
+		
+		File[] inputFiles = new File(dir).listFiles();
 		DumpReader reader = null;
 		FileInputStream stream = null;
 
-		if(inputFiles.length!=0){
-			try 
-			{
+		if(inputFiles.length != 0){
+			try {
 				for(File file : inputFiles){
-					logger.info("Read file: "+file.getName()+".");
-					
+					logger.info("Read file: " + file.getName()+".");
 					stream = new FileInputStream(file);
-					reader = new DumpReaderExtension(stream, logger, inputDir);
+					reader = new DumpReaderExtension(stream, logger, dir);
 					reader.unmarshal();
 				}
-			}
-			finally 
-			{
-				try 
-				{
+			} finally {
+				try {
 					if (reader != null)
 						reader.close();
-				}
-				finally 
-				{
+				} finally {
 					if (stream != null)
 						stream.close();
 				}
 			}
 		}
-		return pages;
 	}
-
+	
+	
 	private class DumpReaderExtension extends DumpReader
 	{
 		private Logger logger;
 		
-		private DumpReaderExtension(InputStream stream, 
-				Logger logger, String input_dir) throws Exception
-		{
-			super(stream, StandardCharsets.UTF_8, input_dir, logger, true);
+		private DumpConverter converter = new DumpConverter();
+		
+		private DumpReaderExtension(InputStream stream, Logger logger, String dir) throws Exception{
+			super(stream, StandardCharsets.UTF_8, dir, logger, true);
 			this.logger=logger;
 		}
+		
+		@Override
+		protected void processPage(Object mediaWiki, Object item) throws Exception {
+			
+			Page page = converter.convertPage(item);
+			
+			String title = page.getTitle();
+			
+			PageId id = new PageId(PageTitle.make(config, title), -1);
+			
+			filterAndProcessRevisions(page, id);
+			
+			pageInfos.put(title, id);
+			
+			languages.put(title, getLanguage(mediaWiki));
+		}
+		
+		private String getLanguage(Object mediaWiki){
+			
+			if (mediaWiki instanceof org.sweble.wikitext.dumpreader.export_0_5.MediaWikiType)
+				return ((org.sweble.wikitext.dumpreader.export_0_5.MediaWikiType) mediaWiki).getLang();
+
+			else if (mediaWiki instanceof org.sweble.wikitext.dumpreader.export_0_6.MediaWikiType)
+				return ((org.sweble.wikitext.dumpreader.export_0_6.MediaWikiType) mediaWiki).getLang();
+
+			else if (mediaWiki instanceof org.sweble.wikitext.dumpreader.export_0_7.MediaWikiType)
+				return ((org.sweble.wikitext.dumpreader.export_0_7.MediaWikiType) mediaWiki).getLang();
+
+			else if (mediaWiki instanceof org.sweble.wikitext.dumpreader.export_0_8.MediaWikiType)
+				return ((org.sweble.wikitext.dumpreader.export_0_8.MediaWikiType) mediaWiki).getLang();
+
+			else if (mediaWiki instanceof org.sweble.wikitext.dumpreader.export_0_9.MediaWikiType)
+				return ((org.sweble.wikitext.dumpreader.export_0_9.MediaWikiType) mediaWiki).getLang();
+
+			else if (mediaWiki instanceof org.sweble.wikitext.dumpreader.export_0_10.MediaWikiType)
+				return ((org.sweble.wikitext.dumpreader.export_0_10.MediaWikiType) mediaWiki).getLang();
+
+			else return "";
+	}
 		
 		/** 
 		 * WikiTrust ignores revisions that are followed by a revision by the same author
 		 */
-		private void filterRevisions(PageType p)
-		{
-			RevisionType currentRevision;
-			RevisionType nextRevision;
+		private void filterAndProcessRevisions(Page page, PageId pageId){
 			
-			int size= p.getRevisionOrUpload().size();
+			int originalSize = page.getRevisions().size();
+			Contributor curr, next;
 			
-			for(int currentPosition=0; currentPosition<p.getRevisionOrUpload().size()-1; currentPosition++)
-			{
-				currentRevision = (RevisionType) p.getRevisionOrUpload().get(currentPosition);
-				nextRevision = (RevisionType) p.getRevisionOrUpload().get(currentPosition+1);
+			int newIndex = 0;
+			
+			for(int currPosition = 0 ; currPosition < (page.getRevisions().size() - 1) ; currPosition++){
 				
-				if(currentRevision.getContributor().getId()!=null 
-					&& nextRevision.getContributor().getId()!=null
-					&& currentRevision.getContributor().getId().equals(nextRevision.getContributor().getId()))
-				{
-					p.getRevisionOrUpload().remove(currentPosition);
-					currentPosition--;
+				curr = page.getRevisions().get(currPosition).getContributor();
+				next = page.getRevisions().get(currPosition + 1).getContributor();
+				
+				if((curr != null) && (next != null) && (curr.getId() != null) && (next.getId() != null)
+						&& (curr.getId().equals(next.getId()))){
+					
+					page.getRevisions().remove(currPosition);
+					
+					currPosition--;
+					
+				} else if ((curr != null) && (curr.getId() != null)) {
+					
+					RevisionID id = new RevisionID(page.getRevisions().get(currPosition), newIndex, page.getTitle());
+					
+					if(!registredEditors.containsKey(curr.getId())){
+						registredEditors.put(curr.getId(), new ArrayList<RevisionID>());
+					}
+					registredEditors.get(curr.getId()).add(id);
+					
+					//TODO fix missing last revision!
+					
+					try {
+						engProcessedPages.put(id, engine.postprocess(pageId, page.getRevisions().get(currPosition).getText(), null));
+						
+					} catch (EngineException e) {
+						logger.error("EngProcessedPage could not be generated.", e);
+						engProcessedPages.put(id, null);
+					}
+					newIndex++;
 				}
 			}
-			logger.info("Filtered "+(size-p.getRevisionOrUpload().size())+" revisions.");
-		}
-	
-		@Override
-		protected void processPage(Object mediaWiki, Object page) throws Exception 
-		{
-			filterRevisions((PageType) page);
-			pages.add(page);
-		}
-		
-		@Override
-		protected boolean processRevision(Object mediaWiki, Object revision) throws Exception 
-		{
-			return true;
+			logger.info("Filtered "+(originalSize-page.getRevisions().size())+" revisions.");
 		}
 	}
+
 }
 

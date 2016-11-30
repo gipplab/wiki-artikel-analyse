@@ -1,20 +1,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  	<modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  	<groupId>ao.thesis</groupId>
-  	<artifactId>wikianalyse</artifactId>
-  	<version>0.0.1-SNAPSHOT</version>
-  	<packaging>jar</packaging>
+	<groupId>ao.thesis</groupId>
+	<artifactId>wikianalyse</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
-  	<name>wikianalyse</name>
-  
-  	<properties>
-    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  	</properties>
-  
+	<name>wikianalyse</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
 	<build>
-	<sourceDirectory>src</sourceDirectory>
+		<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+    	<testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -51,97 +52,97 @@
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<version>3.0.4</version>
-	           	<configuration>
-	        	 		<effort>Max</effort>
-	         			<threshold>Normal</threshold>
-	           		<failOnWarning>true</failOnWarning>
-	          		</configuration>
+				<configuration>
+					<effort>Max</effort>
+					<threshold>Normal</threshold>
+					<failOnWarning>true</failOnWarning>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 
-  	<dependencies>
+	<dependencies>
 		<dependency>
-		    <groupId>de.fau.cs.osr.hddiff</groupId>
-		    <artifactId>hddiff</artifactId>
-		    <version>1.1.0</version>
+			<groupId>de.fau.cs.osr.hddiff</groupId>
+			<artifactId>hddiff</artifactId>
+			<version>1.1.0</version>
 		</dependency>
-	    <dependency>
-	      	<groupId>junit</groupId>
-	      	<artifactId>junit</artifactId>
-	      	<version>4.12</version>
-	      	<scope>test</scope>
-	    </dependency>
 		<dependency>
-		    <groupId>org.sweble.wikitext</groupId>
-		    <artifactId>swc-engine</artifactId>
-		    <version>2.1.0</version>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
 		</dependency>
-	    <dependency>
-	    	<groupId>org.sweble.wikitext</groupId>
-	    	<artifactId>swc-parser-lazy</artifactId>
-	    	<version>2.1.0</version>
-	    </dependency>
-	    <dependency>
-	    	<groupId>org.sweble.wikitext</groupId>
-	    	<artifactId>swc-dumpreader</artifactId>
-	    	<version>2.1.0</version>
-	    </dependency>
-	    <dependency>
-	    	<groupId>net.sf.opencsv</groupId>
-	    	<artifactId>opencsv</artifactId>
-	    	<version>2.3</version>
-	    </dependency>
-	    <dependency>
-	    	<groupId>edu.stanford.nlp</groupId>
-	    	<artifactId>stanford-corenlp</artifactId>
-	    	<version>3.6.0</version>
-	    </dependency>
-	    <dependency>
-	    	<groupId>org.slf4j</groupId>
-	    	<artifactId>jcl-over-slf4j</artifactId>
-	    	<version>1.7.21</version>
-	    </dependency>
-	    <dependency>
-	    	<groupId>ch.qos.logback</groupId>
-	    	<artifactId>logback-classic</artifactId>
-	    	<version>1.1.7</version>
-	    </dependency>
-	    <dependency>
-	    	<groupId>xml-apis</groupId>
-	    	<artifactId>xml-apis</artifactId>
-	    	<version>1.4.01</version>
-	    </dependency>
-	    <dependency>
-	    	<groupId>org.sweble.wom3</groupId>
-	    	<artifactId>sweble-wom3-json-tools</artifactId>
-	    	<version>2.1.0</version>
-	    </dependency>
-	    <dependency>
-	    	<groupId>org.sweble.wom3</groupId>
-	    	<artifactId>sweble-wom3-core</artifactId>
-	    	<version>2.1.0</version>
-	    </dependency>
-	    <dependency>
-	    	<groupId>org.sweble.wom3</groupId>
-	    	<artifactId>sweble-wom3-swc-adapter</artifactId>
-	    	<version>2.1.0</version>
-	    </dependency>
-	    <dependency>
-	    	<groupId>de.fau.cs.osr.hddiff</groupId>
-	    	<artifactId>hddiff-perfsuite</artifactId>
-	    	<version>1.1.0</version>
-	    </dependency>
-	    <dependency>
-	    	<groupId>de.fau.cs.osr.hddiff</groupId>
-	    	<artifactId>hddiff-wom-adapter</artifactId>
-	    	<version>1.1.0</version>
-	    </dependency>
-	    <dependency>
-	      	<groupId>junit</groupId>
-	      	<artifactId>junit</artifactId>
-	      	<version>3.8.1</version>
-	      	<scope>test</scope>
-	    </dependency>
-  	</dependencies>
+		<dependency>
+			<groupId>org.sweble.wikitext</groupId>
+			<artifactId>swc-engine</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sweble.wikitext</groupId>
+			<artifactId>swc-parser-lazy</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sweble.wikitext</groupId>
+			<artifactId>swc-dumpreader</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>edu.stanford.nlp</groupId>
+			<artifactId>stanford-corenlp</artifactId>
+			<version>3.6.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>1.7.21</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.7</version>
+		</dependency>
+		<dependency>
+			<groupId>xml-apis</groupId>
+			<artifactId>xml-apis</artifactId>
+			<version>1.4.01</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sweble.wom3</groupId>
+			<artifactId>sweble-wom3-json-tools</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sweble.wom3</groupId>
+			<artifactId>sweble-wom3-core</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sweble.wom3</groupId>
+			<artifactId>sweble-wom3-swc-adapter</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>de.fau.cs.osr.hddiff</groupId>
+			<artifactId>hddiff-perfsuite</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>de.fau.cs.osr.hddiff</groupId>
+			<artifactId>hddiff-wom-adapter</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 </project>
