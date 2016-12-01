@@ -44,9 +44,14 @@ public class NEToken extends ArrayList<Token> implements Token {
 	}
 
 	@Override
+	/**
+	 * Sets source for all tokens in the token.
+	 */
 	public void setSourceId(RevisionID id) {
 		this.sourceId=id;
-		
+		for(Token token : this){
+			token.setSourceId(id);
+		}
 	}
 
 	@Override
