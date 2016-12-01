@@ -1,5 +1,6 @@
 package ao.thesis.wikianalyse.utils.textanalyse;
 
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,7 @@ public class Tokenizer {
 		this.stopWords = stopWords;
 		this.classifier = classifier;
 	}
+	
 	
 	/**Tokenizes the given revision, sets named entities if possible and sets the given id as 
 	 * source revision for all tokens. For stop words all sources are replaced with an empty revision id.
@@ -87,16 +89,21 @@ public class Tokenizer {
 		
 		for(int index = 0 ; index < tokenizedRevision.size() ; index++){
 			
+			if(neElementIndex >= neElement.size()){
+				return;
+			}
+			
 			if(tokenizedRevision.get(index) instanceof MathFormula){
 				break;
 			}
+			
+			boolean neSetCheck = false;
 
 			do{
 				if(charAndSpaceCount == neElement.get(neElementIndex).second()){
 					
 					int length = (neElement.get(neElementIndex).third() - neElement.get(neElementIndex).second());
 					int tokenCounter = 0;
-					boolean neSetCheck = false;
 					
 					List<Token> neTokens;
 					int neCharAndSpaceCount = 0;
@@ -125,24 +132,30 @@ public class Tokenizer {
 							neSetCheck = true;
 							neElementIndex++;
 						}
+						
 					}
 					while(length > neCharAndSpaceCount);
 					
 					if(neSetCheck){
 						charAndSpaceCount++;
-						
+						break;
 					} else {
 						logger.error("Named Entity could not be set.");
-						
 						tokenizedRevision = saveList;
 						return;
 					}
 				}
-				charAndSpaceCount += (tokenizedRevision.get(index).getText().length() + 1);
+				
+				if(neSetCheck){
+					break;
+				} else {
+					String tokentext = tokenizedRevision.get(index).getText();
+					charAndSpaceCount += (tokentext.length() + 1);
+					index++;
+				}
+
 			}
-			while(charAndSpaceCount < neElement.get(neElementIndex).second());
+			while(charAndSpaceCount <= neElement.get(neElementIndex).second());
 		}
-
 	}
-
 }
