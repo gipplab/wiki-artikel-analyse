@@ -1,7 +1,6 @@
 package ao.thesis.wikianalyse.utils.textanalyse;
 
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,18 +22,16 @@ import edu.stanford.nlp.util.Triple;
  */
 public class Tokenizer {
 	
-	private static Logger logger = Logger.getLogger(Tokenizer.class);
+	private Logger logger;
 	
 	private List<String> stopWords;
-	
 	private CRFClassifier<CoreLabel> classifier;
 	
-	
-	public Tokenizer(List<String> stopWords, CRFClassifier<CoreLabel> classifier){
+	public Tokenizer(List<String> stopWords, CRFClassifier<CoreLabel> classifier, Logger logger){
 		this.stopWords = stopWords;
 		this.classifier = classifier;
+		this.logger = logger;
 	}
-	
 	
 	/**Tokenizes the given revision, sets named entities if possible and sets the given id as 
 	 * source revision for all tokens. For stop words all sources are replaced with an empty revision id.
@@ -42,7 +39,7 @@ public class Tokenizer {
 	 * @param epp		- EngProcessedPage object of the revision
 	 * @param id		- id object of the revision
 	 */
-	public List<Token> tokenize(EngProcessedPage epp, RevisionID sourceID){
+	public List<Token> tokenize(EngProcessedPage epp, RevisionID sourceID, boolean setNEs, boolean filterSWs){
 		
 		logger.info("Tokenize revision on index "+sourceID.getIndex()+" with ID "+sourceID.getId());
 		
@@ -50,39 +47,62 @@ public class Tokenizer {
 		
 		List<Token> tokenizedRevision = (List<Token>) converter.go(epp.getPage());
 		
-		List<Token> revisionFormulas = tokenizedRevision.stream()
-				.filter(o -> (o instanceof MathFormula))
-				.collect(Collectors.toList());
-		
 		tokenizedRevision.stream().forEach(o -> o.setSourceId(sourceID));
 		
-		tokenizedRevision.stream()
-			.filter(o -> ((o instanceof MarkupToken) && (stopWords.contains(o.getText()))))
-			.forEach(o -> o.setSourceId(new RevisionID(BigInteger.ZERO, null, BigInteger.ZERO, -1, "")));
-		
-		String text = converter.sb.toString();
-		
-		if(tryNamedEntities(text, tokenizedRevision.size() - revisionFormulas.size())){
-			setNamedEntities(text, tokenizedRevision);	
-		} else {
-			logger.error("Named entities could not be set.");
+		if(filterSWs){
+			tokenizedRevision.stream()
+				.filter(o -> ((o instanceof MarkupToken) && (stopWords.contains(o.getText()))))
+				.forEach(o -> o.setSourceId(RevisionID.getNullRevision(sourceID.getPageTitle())));
 		}
 		
+		if(setNEs){
+			String text = converter.sb.toString();
+			
+			//TODO define markup fitting sentences
+			List<String> sentences;
+			
+			List<Token> revisionFormulas = tokenizedRevision.stream()
+					.filter(o -> (o instanceof MathFormula))
+					.collect(Collectors.toList());
+			
+			if(tokensFitClassifierResult(text, tokenizedRevision.size() - revisionFormulas.size())){
+				setNamedEntities(text, tokenizedRevision, sourceID);	
+				
+			} else {
+				logger.warn("Named entities could not be set.");
+			}
+		}
 		return tokenizedRevision;
 	}
 	
-	
-	private boolean tryNamedEntities(String text, int tokenCount){
+	/* I was not able to find out yet, how the classifier segments the input text, since the already segmented
+	 * tokens should be classified in their sentence context.
+	 * 
+	 * The splitting pattern* that I use in the TextConverter seems to work in most cases. I had some different 
+	 * segmentations with math formulas and since they do not need classification the TextConverter does not add 
+	 * them to the text.
+	 * 
+	 *  	*(\\s+|\\p{Z}+|(?=(?U)\\p{Punct})|(?<=(?U)\\p{Punct})|(?=\\p{Punct})|(?<=\\p{Punct}))
+	 */
+	private boolean tokensFitClassifierResult(String text, int tokenCount){
 		return classifier.classify(text).stream().mapToInt(sentence -> sentence.size()).sum() == tokenCount;
 	}
 	
-	
-	private void setNamedEntities(String text, List<Token> tokenizedRevision){
+	/* As far as I found out, the classifier does not provide a method that returns the content of one entity. 
+	 * Instead the following methods must be used:
+	 * 
+	 * 		- 	classifier.classifyWithInlineXML(text) returns the text with tags around each entity
+	 * 			that can be parsed.
+	 * 		- 	classifier.classifyToCharacterOffsets(text) returns character offsets for each entity
+	 * 			including white spaces.
+	 * 
+	 * setNamedEntities() uses the second approach to find and set NEs to the already segmented tokens.
+	 */
+	private void setNamedEntities(String text, List<Token> tokenizedRevision, RevisionID sourceID){
 		
 		List<Token> saveList = new ArrayList<Token>(tokenizedRevision);
 		
 		List<Triple<String, Integer, Integer>> neElement = classifier.classifyToCharacterOffsets(text);
-
 		
 		int neElementIndex = 0;
 		int charAndSpaceCount = 0;
@@ -94,7 +114,7 @@ public class Tokenizer {
 			}
 			
 			if(tokenizedRevision.get(index) instanceof MathFormula){
-				break;
+				continue;
 			}
 			
 			boolean neSetCheck = false;
@@ -118,9 +138,7 @@ public class Tokenizer {
 							
 							Token neToken = new NEToken(neTokens, neElement.get(neElementIndex).first());
 							
-							/* all tokens in neTokens have the same source since no matching took place yet.
-							 */
-							neToken.setSourceId(neTokens.get(0).getSourceId());
+							neToken.setSourceId(sourceID);
 							
 							tokenizedRevision.set(index, neToken);
 							
@@ -139,8 +157,9 @@ public class Tokenizer {
 					if(neSetCheck){
 						charAndSpaceCount++;
 						break;
+						
 					} else {
-						logger.error("Named Entity could not be set.");
+						logger.warn("Named Entity could not be set.");
 						tokenizedRevision = saveList;
 						return;
 					}
@@ -148,6 +167,7 @@ public class Tokenizer {
 				
 				if(neSetCheck){
 					break;
+					
 				} else {
 					String tokentext = tokenizedRevision.get(index).getText();
 					charAndSpaceCount += (tokentext.length() + 1);
