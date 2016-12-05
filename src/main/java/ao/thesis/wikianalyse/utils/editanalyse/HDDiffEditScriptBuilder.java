@@ -24,6 +24,7 @@ import de.fau.cs.osr.hddiff.utils.WordSubstringJudge;
 import de.fau.cs.osr.hddiff.wom.WomNodeEligibilityTester;
 import de.fau.cs.osr.hddiff.wom.WomNodeMetrics;
 import de.fau.cs.osr.hddiff.wom.WomToDiffNodeConverter;
+import de.fau.cs.osr.utils.visitor.VisitingException;
 
 /**
  * Builds edit scripts using sweble hddiff.
@@ -83,13 +84,16 @@ public class HDDiffEditScriptBuilder {
 		for(int sourceIndex = 0 ; sourceIndex < sources.size() ; sourceIndex++){
 			
 			ReportItem reportItem = new ReportItem();
-			HDDiff hddiff = buildEditScript(sources.get(sourceIndex), target, reportItem);
+			HDDiff hddiff;
 			
-			editScripts.add(hddiff.editScript());
-			report.add(reportItem);
+			if((hddiff = buildEditScript(sources.get(sourceIndex), target, reportItem)) != null){
+				editScripts.add(hddiff.editScript());
+				report.add(reportItem);
+			} else {
+				editScripts.add(null);
+			}
 		}
-		
-		writeEditScriptInfo(targetIndex);
+		//writeEditScriptInfo(targetIndex);
 		
 		return editScripts;
 	}
@@ -99,15 +103,29 @@ public class HDDiffEditScriptBuilder {
 		
 		WtWom3Toolbox wtWom3Toolbox = new WtWom3Toolbox();
 		
-		Wom3Document womTarget = wtWom3Toolbox.astToWom(pageId, target);
-		Wom3Document womSource = wtWom3Toolbox.astToWom(pageId, source);
+		Wom3Document womTarget;
+		Wom3Document womSource;
+		
+		try{
+			
+			womTarget = wtWom3Toolbox.astToWom(pageId, target);
+			womSource = wtWom3Toolbox.astToWom(pageId, source);
+			
+		} catch (VisitingException | IllegalArgumentException e){
+			/*
+			 * Gets thrown when pageId has an invalid title that contains /
+			 * TODO check earlier
+			 */
+			logger.error(e.getMessage());
+			return null;
+		}
 		
 		Wom3Node rootTarget = (Wom3Node) womTarget.getDocumentElement();
 		Wom3Node rootSource = (Wom3Node) womSource.getDocumentElement();
 		
 		DiffNode diffNodeTarget = WomToDiffNodeConverter.preprocess(rootTarget);
 		DiffNode diffNodeSource = WomToDiffNodeConverter.preprocess(rootSource);
-
+		
 		return new HDDiff(diffNodeSource, diffNodeTarget, setupWikiDiff(), reportItem);
 	}
 	
