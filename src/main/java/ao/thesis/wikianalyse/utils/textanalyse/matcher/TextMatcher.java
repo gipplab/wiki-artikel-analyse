@@ -20,59 +20,63 @@ import ao.thesis.wikianalyse.utils.textanalyse.tokens.MathFormula;
 public class TextMatcher extends Matcher {		
 	
 	private static Logger logger = Logger.getLogger(TextMatcher.class);
-	
 	private final int maxComparisations;
-	
 	private final int minMatchLength;
-	
 	private List<List<Object>> revisions;
+	private Comparator<Match> comparator;
 	
 	public TextMatcher(int maxComparisations, int minMatchLength) {
 		this.maxComparisations = maxComparisations;
 		this.minMatchLength = minMatchLength;
 	}
 	
-	public List<List<Match>> matchAll(List<List<Object>> objects, Comparator<Match> comparator) {
-		
-		List<List<Match>> allBestMatches = new LinkedList<List<Match>>();
-		
-		if(!objects.isEmpty()){
-			
-			this.prefixPositions = new ArrayList<HashMap<Object, List<Integer>>>(objects.size());
-			
-			objects.stream().forEach(o -> buildPrefixHashMap(o, prefixPositions));
-				
-			/* getBestMatches() compares every revision with previous revisions, 
-			 * so it starts at targetNumber = 1.
-			 */
-			for(int targetNumber = 1 ; targetNumber < objects.size() ; targetNumber++){
-				allBestMatches.add(getBestMatches(targetNumber, objects, comparator));
-			}
-		}
-		return allBestMatches;
+	public TextMatcher(int maxComparisations, int minMatchLength, Comparator<Match> comp) {
+		this.maxComparisations = maxComparisations;
+		this.minMatchLength = minMatchLength;
+		this.comparator = comp;
 	}
 
-	public List<List<Match>> matchToTarget(List<List<Object>> objects, List<Object> target, Comparator<Match> comparator) {
-		List<List<Match>> allBestMatches = new LinkedList<List<Match>>();
-		
-		if(!objects.isEmpty()){
-			
-			objects.add(target);
-			
-			this.prefixPositions = new ArrayList<HashMap<Object, List<Integer>>>(objects.size());
-			
-			objects.stream().forEach(o -> buildPrefixHashMap(o, prefixPositions));
+//	public List<List<Match>> matchAll(List<List<Object>> objects) {
+//		
+//		List<List<Match>> allBestMatches = new LinkedList<List<Match>>();
+//		
+//		if(!objects.isEmpty()){
+//			
+//			this.prefixPositions = new ArrayList<HashMap<Object, List<Integer>>>(objects.size());
+//			
+//			objects.stream().forEach(o -> buildPrefixHashMap(o, prefixPositions));
+//				
+//			/* getBestMatches() compares every revision with previous revisions, 
+//			 * so it starts at targetNumber = 1.
+//			 */
+//			for(int targetNumber = 1 ; targetNumber < objects.size() ; targetNumber++){
+//				allBestMatches.add(getBestMatches(targetNumber, objects, comparator));
+//			}
+//		}
+//		return allBestMatches;
+//	}
 
-			allBestMatches.add(getBestMatches(objects.size()-1, objects, comparator));
-		}
-		return allBestMatches;
-	}
+//	public List<List<Match>> matchToTarget(List<List<Object>> objects, List<Object> target, Comparator<Match> comparator) {
+//		List<List<Match>> allBestMatches = new LinkedList<List<Match>>();
+//		
+//		if(!objects.isEmpty()){
+//			
+//			objects.add(target);
+//			
+//			this.prefixPositions = new ArrayList<HashMap<Object, List<Integer>>>(objects.size());
+//			
+//			objects.stream().forEach(o -> buildPrefixHashMap(o, prefixPositions));
+//
+//			allBestMatches.add(getBestMatches(objects.size()-1, objects, comparator));
+//		}
+//		return allBestMatches;
+//	}
 	
-	private void buildPrefixHashMap(List<Object> o, List<HashMap<Object, List<Integer>>> prefixPositions) {
-		prefixPositions.add(buildPrefixHashMap(o));
-	}
+//	private void buildPrefixHashMap(List<Object> o, List<HashMap<Object, List<Integer>>> prefixPositions) {
+//		prefixPositions.add(buildPrefixHashMap(o));
+//	}
 
-	public List<List<Match>> match(List<List<Object>> revisions, Comparator<Match> comparator){
+	public List<List<Match>> match(List<List<Object>> revisions){
 		
 		List<List<Match>> allBestMatches = new LinkedList<List<Match>>();
 		

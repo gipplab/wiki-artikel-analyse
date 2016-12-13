@@ -13,13 +13,35 @@ public class MathFormula extends ArrayList<MathToken> implements Token {
 	private String text;
 	
 	private RevisionID sourceId;
+	
+	public MathFormula(String formula){
+		text = formula;
+	}
 
 	public MathFormula(List<MathToken> formula){
 		this.addAll(formula);
 		
 		text = "";
-		formula.stream().forEach(t -> text += t.getText()+" ");
+		formula.stream().forEachOrdered(t -> text += t.getText());
 		text.trim();
+	}
+	
+	public void setTokens(String buildXMLString) {
+		this.clear();
+		List<MathToken> tokens = new ArrayList<MathToken>();
+		for(String text : buildXMLString.split("\\s+")){
+			MathToken token = new MathToken();
+			token.setText(text);
+			tokens.add(token);
+		}
+		this.addAll(tokens);
+		setSourceId(getSourceId());
+	}
+	
+	public void setTokens(List<MathToken> list){
+		this.clear();
+		this.addAll(list);
+		setSourceId(getSourceId()); // updates source in all new tokens
 	}
 	
 	@Override
@@ -57,4 +79,5 @@ public class MathFormula extends ArrayList<MathToken> implements Token {
 	public String getText() {
 		return text;
 	}
+
 }
