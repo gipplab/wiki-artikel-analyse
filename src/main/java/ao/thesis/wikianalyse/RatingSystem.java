@@ -1,82 +1,141 @@
 package ao.thesis.wikianalyse;
 
+import java.io.IOException;
+
+import org.apache.log4j.Logger;
+
 import ao.thesis.wikianalyse.io.InputReader;
 import ao.thesis.wikianalyse.io.OutputWriter;
 
 import ao.thesis.wikianalyse.model.RatingBuilder;
 import ao.thesis.wikianalyse.model.WikiOrga;
+import ao.thesis.wikianalyse.ratingsystems.MathRatingSystem;
+import ao.thesis.wikianalyse.ratingsystems.SwebleEditRatingSystem;
+import ao.thesis.wikianalyse.ratingsystems.TokenCountRatingSystem;
 
-/**
- * System to rate Wikipedia editors.
+/**System that rates Wikipedia editors.
  * 
  * @author anna
- *
  */
 public abstract class RatingSystem {
 	
+	protected static Logger logger;
+	private String inputdir;
+	private String outputdir;
 	
 	protected WikiOrga orga = null;
-	
 	protected RatingBuilder rb = null;
-	
 	protected OutputWriter ow = null;
 	
-	/**Reads pages from input direction.
-	 * @param dir			- input direction
-	 * @throws Exception is thrown if the input can not be read.
-	 */
-	public void readPages(String dir) throws Exception{
-		
-		setWikiOrga((new InputReader(dir)).getWikiOrga());
-	};
+	private boolean writePreOutput = false;
+	private boolean writeProcOutput = true;
+	private boolean writePostOutput = false; //TODO editor reputation output
 
-	public void setWikiOrga(WikiOrga orga){
-		
-		this.orga = orga;
-		
-		rb = new RatingBuilder(this.orga.getRevisionIds());
-	}
 	
-	/** Processes input revisions to something that can be rated.
-	 * @param outputDir
-	 */
-	public abstract void setEditVolume(String outputDir);
-	
-	/** Associates editors to edits and text if needed.
-	 * @param outputDir
-	 */
-	public abstract void associateEditors(String outputDir);
-	
-	/** Rates revisions.
-	 * @param outputDir
-	 */
-	public abstract void rateEdits(String outputDir);
-	
-	/** Rates editors.
-	 * @param outputDir
-	 */
-	public abstract void rateEditors(String outputDir);
-	
-	
-//	public void printOutput(String dir){
-//		
-//		OutputWriter writer = new OutputWriter(dir, orga.getTitles());
-//		writer.writeTimelineOutput();
-//		rb.output(orga.getChronologicalRevisions());
-//	};
-	
-
 	public void run(String inputdir, String outputdir) throws Exception{
 		
-		readPages(inputdir);
+		this.inputdir=inputdir;
+		this.outputdir=outputdir;
+		logger = Logger.getLogger(RatingSystem.class);
 		
-		setEditVolume(outputdir);
+		logger.info("Start init.");
+		init();
 		
-		associateEditors(outputdir);
+		logger.info("Start preprocession.");
+		preprocess();
+		logger.info("Preprocession ready.");
+		if(writePreOutput){
+			writePreOutcome();
+			logger.info("Wrote Output.");
+		}
 		
-		rateEdits(outputdir);
+		logger.info("Start procession.");
+		process();
+		logger.info("Procession ready.");
+		if(writeProcOutput){
+			writeProcOutcome();
+			logger.info("Wrote Output.");
+		}
 		
-		rateEditors(outputdir);
+		logger.info("Start postprocession.");
+		postprocess();
+		logger.info("Postprocession ready.");
+		if(writePostOutput){
+			writePostOutcome();
+			logger.info("Wrote Output.");
+		}
 	}
+	
+	private void init(){
+		try {
+			readPages(inputdir);
+		} catch (Exception e) {
+			return;
+		}
+		setOutputWriter(new OutputWriter(outputdir, orga.getTitles()));
+	};
+	
+	private void readPages(String dir) throws Exception{
+		setWikiOrga((new InputReader(dir)).getWikiOrga());
+	};
+	
+	
+	public abstract void preprocess();
+	
+	public abstract void process();
+
+	public abstract void postprocess();
+	
+	
+	public void setWikiOrga(WikiOrga orga){
+		this.orga = orga;
+		setRatingBuilder(new RatingBuilder(this.orga.getRevisionIds()));
+	}
+	
+	public void setRatingBuilder(RatingBuilder rb){
+		this.rb = rb;
+	}
+	
+	public RatingBuilder getRatingBuilder(){
+		return rb;
+	}
+	
+	public void setOutputWriter(OutputWriter ow){
+		this.ow = ow;
+	}
+	
+	
+	public void writePreOutcome() throws IOException{
+		if(this instanceof SwebleEditRatingSystem){
+//			writeEditScript();
+		} else if (this instanceof TokenCountRatingSystem 
+				|| this instanceof MathRatingSystem){
+//			writeTokens();
+		}
+	}
+	
+	public void writeProcOutcome() throws IOException{
+		writeRating();
+	}
+	
+	public void writePostOutcome() throws IOException{
+//		writeTimeline();
+//		writeEditors();
+	}
+	
+	private void writeRating() throws IOException{
+		for(String title : orga.getTitles()){
+			ow.writeRatingsOutput(rb.getOutput(orga.getSortedHistory(title)), rb.getHeadLines(), title, "Rating");
+		}
+	};
+	
+//	TODO
+//	private void writeTimeline() throws IOException{
+//		ow.writeTimelineOutput(rb.getOutput(orga.getChronologicalRevisions()), rb.getHeadLines(), "Timeline");
+//	};
+//	
+//	private void writeEditors() throws IOException{
+//		ow.writeEditorOutput(rb.getOutput(orga.getChronologicalRevisions()), rb.getHeadLines(), "Editors");
+//	};
 	
 }

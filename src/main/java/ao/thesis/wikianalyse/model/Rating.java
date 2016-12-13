@@ -8,18 +8,15 @@ package ao.thesis.wikianalyse.model;
  */
 public interface Rating {
 	
-	/** Headlines for the csv-output.
-	 * @return array of headlines for all ratings that should be printed.
-	 */
-	public String[] buildOutputHeadlines();
-
 	/** Values for the csv-output.
 	 * @return array of values for all ratings that should be printed.
 	 */
 	public String[] buildOutputLine();
 	
-	/** Stores the editor reputation for that revision 
-	 *  to allow chronological reputation development.
-	 */
-	public void setEditorReputation();
+//	/** Stores the editor reputation for the rated revision 
+//	 *  to allow chronological reputation development.
+//	 */
+//	public void setOrUpdateEditorReputation(double reputation);
+	
+	public double getReputationMeasureResult();
 }

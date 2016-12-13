@@ -43,18 +43,16 @@ public class HDDiffEditScriptBuilder {
 	private Report report = new Report();
 	
 	
-	public HDDiffEditScriptBuilder(PageId pageId, String outputdir, Logger logger){
+	public HDDiffEditScriptBuilder(PageId pageId, Logger logger){
 		
 		this.pageId=pageId;
-		
-		this.outputdir=outputdir;
 		
 		this.logger=logger;
 	}
 
 	/** Builds all edit scripts for a list of EngProcessedPage objects.
 	 * 
-	 * Because a edit script for the first revision is needed, the given list has to contain a
+	 * Because an edit script for the first revision is needed, the given list has to contain a
 	 * first empty EngProcessedPage object.
 	 * 
 	 * @param revisions				- sorted list of EngProcessedPage objects.

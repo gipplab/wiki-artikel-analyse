@@ -14,7 +14,7 @@ public abstract class Matcher {
 	protected List<List<HashMap<Object, List<Integer>>>> mathPrefixPositions;
 	
 	
-	public Comparator<MathMatch> getDefaultMathComparator(){
+	public static Comparator<MathMatch> getDefaultMathComparator(){
 		return new Comparator<MathMatch>(){
 			public int compare(MathMatch m1, MathMatch m2){
 				return m1.compareTo(m2);
@@ -22,7 +22,7 @@ public abstract class Matcher {
 		};
 	}
 	
-	public Comparator<Match> getDefaultComparator(){
+	public static Comparator<Match> getDefaultComparator(){
 		return new Comparator<Match>(){
 			public int compare(Match m1, Match m2){
 				return m1.compareTo(m2);
@@ -46,6 +46,10 @@ public abstract class Matcher {
 	
 	protected PriorityQueue<Match> buildQueue(int size, Comparator<Match> comparator){
 		return new PriorityQueue<Match>(size, comparator);
+	}
+	
+	protected PriorityQueue<MathMatch> buildMathQueue(int size, Comparator<Match> comparator){
+		return new PriorityQueue<MathMatch>(size, comparator);
 	}
 
 }

@@ -4,27 +4,27 @@ import ao.thesis.wikianalyse.model.RevisionID;
 
 public class MathToken implements Token {
 
-	final private String text;
+	private String mathText = "";
 	
 	private RevisionID sourceId;
 
-	public MathToken(String text){
-		this.text=text;
+	public void setText(String text){
+		this.mathText=text;
 	}
 
 	@Override
 	public boolean equals(Object c) {
-		return ((c instanceof MathToken) && text.equals(((MathToken)c).getText()));
+		return ((c instanceof MathToken) && mathText.equals(((MathToken)c).getText()));
 	}
 
 	@Override
 	public String getText() {
-		return text;
+		return mathText;
 	}
 	
 	@Override
 	public int hashCode() {
-		return text.hashCode();
+		return mathText.hashCode();
 	}
 
 	public RevisionID getSourceId() {

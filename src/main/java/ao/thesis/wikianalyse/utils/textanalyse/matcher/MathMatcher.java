@@ -21,9 +21,28 @@ public class MathMatcher extends Matcher {
 	
 	private MathFormula target;
 	
+	private final int maxComparisations;
+	
+	private final int minMatchLength;
+	
+	private Comparator<Match> comparator;
+	
+	
+	public MathMatcher(int maxComparisations, int minMatchLength) {
+		this.maxComparisations=maxComparisations;
+		this.minMatchLength=minMatchLength;
+		this.comparator=Matcher.getDefaultComparator();
+	}
+
+	public MathMatcher(int maxComparisations, int minMatchLength, Comparator<Match> comp) {
+		this.maxComparisations=maxComparisations;
+		this.minMatchLength=minMatchLength;
+		this.comparator=comp;
+	}
+
 	@SuppressWarnings("unchecked")
 	public List<Match> match(List<List<Object>> prevFormulas, MathFormula target, int targetIndex, 
-			int targetRevisionIndex, Comparator<Match> comparator){
+			int targetRevisionIndex){
 		
 		List<Match> allBestMatches = new LinkedList<Match>();
 		
@@ -36,13 +55,13 @@ public class MathMatcher extends Matcher {
 			
 			this.prevFormulas.stream().forEach(formula -> mathPrefixPositions.add(buildMathPrefixHashMap((List) formula)));
 			
-			allBestMatches = getBestMatches(targetIndex, targetRevisionIndex, comparator);
+			allBestMatches = getBestMatches(targetIndex, targetRevisionIndex);
 		}
 		
 		return allBestMatches;
 	}
 	
-	private List<Match> getBestMatches(int targetFormulaIndex, int targetRevIndex, Comparator<Match> comparator){
+	private List<Match> getBestMatches(int targetFormulaIndex, int targetRevIndex){
 		
 		List<Match> bestMatches = new LinkedList<Match>();
 		List<Match> allMatches = new LinkedList<Match>();
@@ -95,8 +114,7 @@ public class MathMatcher extends Matcher {
 		return bestMatches;
 	}
 	
-	
-	
+
 	private List<Match> matchFormulas(int sourceFormulaIndex, int sourceRevIndex, int targetFormulaIndex, int targetRevIndex){
 		
 		List<Match> matches = new LinkedList<Match>();
