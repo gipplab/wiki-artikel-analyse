@@ -10,7 +10,8 @@ import java.util.stream.Collectors;
 import ao.thesis.wikianalyse.RatingSystem;
 import ao.thesis.wikianalyse.model.Rating;
 import ao.thesis.wikianalyse.model.RevisionID;
-import ao.thesis.wikianalyse.model.ratings.TokenCountRating;
+import ao.thesis.wikianalyse.model.ratings.MarkupRating;
+import ao.thesis.wikianalyse.model.ratings.TextCountRating;
 import ao.thesis.wikianalyse.utils.textanalyse.EditorAssociation;
 import ao.thesis.wikianalyse.utils.textanalyse.StopWordReader;
 import ao.thesis.wikianalyse.utils.textanalyse.TextJudger;
@@ -28,8 +29,6 @@ import edu.stanford.nlp.ling.CoreLabel;
  * value of several judging editors.
  * Prints an token overview.
  * 
- * TODO: does not yet set the text decay quality in the rating class
- * 
  * @author anna
  *
  */
@@ -44,6 +43,10 @@ public class TokenCountRatingSystem extends RatingSystem {
 	private boolean writeTokens = true;
 	private boolean filterStopWords = true;
 	private boolean setNEs = true;
+	
+	/* For reproduction of results, that analyze no markup
+	 */
+	private boolean tokenizeWithoutMarkup = true; 
 
 //	/* Stores a judger for text and markup token before they are matched with previous revisions.
 //	 */
@@ -88,7 +91,8 @@ public class TokenCountRatingSystem extends RatingSystem {
 		Map<String, List<List<Token>>> revisions = new HashMap<String, List<List<Token>>>();
 		Map<String, List<List<MathFormula>>> mathFormulas = new HashMap<String, List<List<MathFormula>>>();
 		
-		Map<RevisionID, Rating> wordAmountRatings = new HashMap<RevisionID, Rating>();
+		Map<RevisionID, Rating> allTextCountRatings = new HashMap<RevisionID, Rating>();
+		Map<RevisionID, Rating> allMarkupRatings = new HashMap<RevisionID, Rating>();
 		
 		for(String title : orga.getTitles()){
 			
@@ -101,10 +105,11 @@ public class TokenCountRatingSystem extends RatingSystem {
 							tokenizer, 
 							revisions.get(title), 
 							mathFormulas.get(title), 
-							wordAmountRatings);
+							allTextCountRatings,
+							allMarkupRatings);
 				}
 			}
-			// TODO text and math formulas must be matched together, otherwise it fails
+			// TODO text and math formulas must be matched together, failure otherwise
 			ea.associateTextEditors(revisions.get(title), new TextMatcher(10, 3, Matcher.getDefaultComparator()));
 			
 			if(writeTokens){
@@ -113,7 +118,10 @@ public class TokenCountRatingSystem extends RatingSystem {
 		}
 		/* Rating with all token count information
 		 */
-		rb.rateRevisions(wordAmountRatings, TokenCountRating.buildOutputHeadlines("ALL"));
+//		rb.rateRevisions(allTextCountRatings, TextCountRating.buildOutputHeadlines("ALL"));
+		if(!tokenizeWithoutMarkup){
+			rb.rateRevisions(allMarkupRatings, MarkupRating.buildOutputHeadlines("ALL"));
+		}
 		
 		/* Rating with new inserted token count information
 		 */
@@ -133,52 +141,88 @@ public class TokenCountRatingSystem extends RatingSystem {
 			Tokenizer tokenizer, 
 			List<List<Token>> revisions, 
 			List<List<MathFormula>> mathFormulas, 
-			Map<RevisionID, Rating> wordAmountRatings){
+			Map<RevisionID, Rating> allTextCountRatings, 
+			Map<RevisionID, Rating> allMarkupRatings){
 		
 		/* Tokenization
 		 */
-		List<Token> revision = tokenizer.tokenize(orga.getEngProcessedPage(id), id, setNEs, filterStopWords);
-		revisions.add(revision);
-		List<MathFormula> revisionFormulas = (List) revision.stream().filter(o -> (o instanceof MathFormula)).collect(Collectors.toList());
-		mathFormulas.add(revisionFormulas);
+		List<Token> revision;
+		
+		if(tokenizeWithoutMarkup){
+			revision = tokenizer.tokenize(orga.getWikiText(id), id, filterStopWords);
+			revisions.add(revision);
+			mathFormulas.add(new ArrayList());
+		} else {
+			revision = tokenizer.tokenize(orga.getEngProcessedPage(id), id, setNEs, filterStopWords);
+			revisions.add(revision);
+			List<MathFormula> revisionFormulas = (List) revision.stream().filter(o -> (o instanceof MathFormula)).collect(Collectors.toList());
+			mathFormulas.add(revisionFormulas);
+		}
 		
 		/* Rating
 		 */
 		TextJudger judger = new TextJudger(revision, id);
-		TokenCountRating counts = new TokenCountRating();
-		judger.setTokenCountRating(counts);
-		wordAmountRatings.put(id, counts);
+		TextCountRating rating = new TextCountRating();
+		judger.setRating(rating);
+		allTextCountRatings.put(id, rating);
+		
+		if(!tokenizeWithoutMarkup){
+			MarkupRating markupRating = new MarkupRating();
+			judger.setRating(markupRating);
+			allMarkupRatings.put(id, markupRating);
+		}
 	}
 	
 	private void setInsertedRatings(
 			Map<String, List<List<Token>>> revisions,
 			Map<String, List<List<MathFormula>>> mathFormulas){
 		
-		Map<RevisionID, Rating> insertedWordRatings = new HashMap<RevisionID, Rating>();
+		Map<RevisionID, Rating> insertTextCountRatings = new HashMap<RevisionID, Rating>();
+		Map<RevisionID, Rating> insertMarkupRatings = new HashMap<RevisionID, Rating>();
 		
 		for(RevisionID id : orga.getChronologicalRevisions()){
 			if(!id.isNullRevision()){
 				
-				TokenCountRating counts = new TokenCountRating();
 				TextJudger judger = new TextJudger(revisions.get(id.getPageTitle()).get(id.getIndex()), id);
-				judger.setTokenCountRating(counts);
-				insertedWordRatings.put(id, counts);
+				TextCountRating rating = new TextCountRating();
+				judger.setRating(rating);
+				insertTextCountRatings.put(id, rating);
+				
+				if(!tokenizeWithoutMarkup){
+					MarkupRating markupRating = new MarkupRating();
+					judger.setRating(markupRating);
+					insertMarkupRatings.put(id, markupRating);
+				}
 				postMatchedTextJudger.put(id, judger);
 				this.mathFormulas.put(id, mathFormulas.get(id.getPageTitle()).get(id.getIndex()));
 			}
 		}
-		rb.rateRevisions(insertedWordRatings, TokenCountRating.buildOutputHeadlines("IN"));
+		
+		for(RevisionID id : orga.getChronologicalRevisions()){
+			if(!id.isNullRevision()){
+				int survivedText = 0;
+				for(RevisionID judgingId : orga.getJudgingRevisions(id, 10)){
+					survivedText += postMatchedTextJudger.get(judgingId).getInsertedTokens(id).size();
+				}
+				((TextCountRating) insertTextCountRatings.get(id)).setTextDecayQuality(TextJudger.calculateDecayQuality(postMatchedTextJudger.get(id).getInsertedTokens().size(), survivedText, 10));
+			}
+		}
+		
+		rb.rateRevisions(insertTextCountRatings, TextCountRating.buildOutputHeadlines("IN"));
+		if(!tokenizeWithoutMarkup){
+			rb.rateRevisions(insertMarkupRatings, MarkupRating.buildOutputHeadlines("IN"));
+		}
 	}
 	
 
 	@Override
 	public void process() {
-		for(RevisionID id : orga.getChronologicalRevisions()){
-			if(!id.isNullRevision()){
-				//TODO calculate text decay quality in rating class
-				rb.getJudgingMeasureResult(id, 1); // 1 : index of the inserted word ratings
-			}
-		}
+//		for(RevisionID id : orga.getChronologicalRevisions()){
+//			if(!id.isNullRevision()){
+//				
+//				rb.getJudgingMeasureResult(id, 1); // 1 : index of the inserted word ratings
+//			}
+//		}
 	}
 	
 	
@@ -186,12 +230,16 @@ public class TokenCountRatingSystem extends RatingSystem {
 	public void postprocess(){
 		orga.getChronologicalRevisions().stream().filter(id -> !id.isNullRevision()).forEachOrdered(id -> setEditorReputation(id));
 	}
-	
-	//TODO does not yet rate editors; no text decay quality is calculated
+
 	private void setEditorReputation(RevisionID id){
 		List<RevisionID> judgingRevisions = orga.getJudgingRevisions(id, judgingDistance);
 		if(judgingRevisions.size() == judgingDistance){
-			double update = rb.getJudgingMeasureResult(id, 1);
+			double update;
+			if(tokenizeWithoutMarkup){
+				update = rb.getJudgingMeasureResult(id, 0);
+			} else {
+				update = rb.getJudgingMeasureResult(id, 3);
+			}
 			double judgingReputation = judgingRevisions.get(judgingDistance-1).getEditor().getReputation();
 			id.getEditor().updateReputation(update, judgingReputation);
 		}

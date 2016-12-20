@@ -29,7 +29,7 @@ public abstract class RatingSystem {
 	
 	private boolean writePreOutput = false;
 	private boolean writeProcOutput = true;
-	private boolean writePostOutput = false; //TODO editor reputation output
+	private boolean writePostOutput = true; //TODO editor reputation output
 
 	
 	public void run(String inputdir, String outputdir) throws Exception{
@@ -115,25 +115,17 @@ public abstract class RatingSystem {
 	}
 	
 	public void writeProcOutcome() throws IOException{
-		writeRating();
-	}
-	
-	public void writePostOutcome() throws IOException{
-//		writeTimeline();
-//		writeEditors();
-	}
-	
-	private void writeRating() throws IOException{
 		for(String title : orga.getTitles()){
 			ow.writeRatingsOutput(rb.getOutput(orga.getSortedHistory(title)), rb.getHeadLines(), title, "Rating");
 		}
-	};
+	}
 	
-//	TODO
-//	private void writeTimeline() throws IOException{
-//		ow.writeTimelineOutput(rb.getOutput(orga.getChronologicalRevisions()), rb.getHeadLines(), "Timeline");
-//	};
-//	
+	public void writePostOutcome() throws IOException{
+		ow.writeTimelineOutput(rb.getOutput(orga.getChronologicalRevisions()), rb.getHeadLines());
+//		writeEditors();
+	}
+	
+
 //	private void writeEditors() throws IOException{
 //		ow.writeEditorOutput(rb.getOutput(orga.getChronologicalRevisions()), rb.getHeadLines(), "Editors");
 //	};

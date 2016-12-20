@@ -56,7 +56,7 @@ public class Match{
 	}
 	
 	/**
-	 * TODO WikiTrust describes different compare measures.
+	 * WikiTrust describes different quality scores.
 	 */
 	public int compareTo(Match other){
 		

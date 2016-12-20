@@ -51,13 +51,10 @@ public class EditJudger {
 	}
 	
 	public int getOpCount(int targetindex, Operation op){
-		targetindex++;
-		return getOpCount(editScripts.get(targetindex).get(targetindex-1), op);
+		return getOpCount(editScripts.get(targetindex).get(targetindex), op);
 	}
 	
 	public int getOpCount(int targetindex, int sourceindex, Operation op){
-		targetindex++;
-		sourceindex++;
 		return getOpCount(editScripts.get(targetindex).get(sourceindex), op);
 	}
 
@@ -66,8 +63,6 @@ public class EditJudger {
 	 * @param rating	- rating object
 	 */
 	public void setValuesInEditOpRating(int index, EditOpRating rating, int judgingDistance) {
-//		index++;
-		//TODO condition
 		
 		if(index < editScripts.size()-1){
 			
@@ -88,7 +83,6 @@ public class EditJudger {
 	 * @return edit longevity for the edits in the given revision
 	 */
 	public double calculateEditLongevity(int index, int distance){
-		index++;
 		if(index < editScripts.size()-1){
 			
 			int targetIndex = index + distance;
@@ -99,9 +93,9 @@ public class EditJudger {
 			List<List<EditOp>> editsToCurrent = editScripts.get(index);
 			List<List<EditOp>> editsToTarget = editScripts.get(targetIndex);
 			
-			List<EditOp> prevToCurrent = editsToCurrent.get(index-1);
-			List<EditOp> prevToTarget = editsToTarget.get(index-1);
-			List<EditOp> currentToTarget = editsToTarget.get(index);
+			List<EditOp> prevToCurrent = editsToCurrent.get(index);
+			List<EditOp> prevToTarget = editsToTarget.get(index);
+			List<EditOp> currentToTarget = editsToTarget.get(index+1);
 			
 			return calculateEditLongevity(prevToCurrent, prevToTarget, currentToTarget);
 			

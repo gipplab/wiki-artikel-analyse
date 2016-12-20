@@ -138,5 +138,10 @@ public class RevisionID implements Comparable<RevisionID>{
 			return getId().compareTo(other.getId());
 		} else return getTimestamp().compareTo(other.getTimestamp());
 	}
+	
+	@Override
+	public String toString() {
+		return "[RevID: "+getId()+"("+getPageTitle()+", "+getIndex()+") Cond:"+this.getUsername()+"]";
+	}
 
 }

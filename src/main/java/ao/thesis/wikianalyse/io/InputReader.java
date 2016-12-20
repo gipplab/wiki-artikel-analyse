@@ -22,13 +22,18 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.sweble.wikitext.dumpreader.DumpReader;
 import org.sweble.wikitext.dumpreader.model.DumpConverter;
 import org.sweble.wikitext.dumpreader.model.Page;
+import org.sweble.wikitext.dumpreader.model.Revision;
 import org.sweble.wikitext.engine.EngineException;
 import org.sweble.wikitext.engine.PageId;
 import org.sweble.wikitext.engine.PageTitle;
@@ -55,12 +60,18 @@ public class InputReader {
 	private UserGroupReader userGroupReader = null;
 
 	private Map<RevisionID, EngProcessedPage> engProcessedPages = new HashMap<RevisionID, EngProcessedPage>();
+	private Map<RevisionID, String> wikiTexts = new HashMap<RevisionID, String>();
 	private Map<String, Editor> editors = new HashMap<String, Editor>();
 	private Map<String, PageId> pageIds = new HashMap<String, PageId>();
 	private Map<String, String> languages = new HashMap<String, String>();
 	
 	private final static int MAX_PAGES = 30;
 	private final static int MAX_REVISIONS = 20;
+	
+	private boolean useCorpus = false;
+	private Set<BigInteger> corpusRevisions;
+	
+	private int limitYear = 2016;
 	
 	public InputReader(String dir) throws Exception {
 		read(dir);
@@ -77,6 +88,7 @@ public class InputReader {
 			orga.setUsergroupReader(userGroupReader);
 		}
 		orga.setEngProcessedPages(engProcessedPages);
+		orga.setWikiTexts(wikiTexts);
 		
 		return orga;
 	}
@@ -183,8 +195,8 @@ public class InputReader {
 		private void preprocessRevisions(Page page, PageId pageId, boolean filter){
 			
 			boolean addPage;
-			
-			int originalSize = page.getRevisions().size();
+			List<Revision> revisions = page.getRevisions();
+			int originalSize = revisions.size();
 			
 			/*
 			 * Add empty first revision.
@@ -197,31 +209,46 @@ public class InputReader {
 				engProcessedPages.put(RevisionID.getNullRevision(page.getTitle()), null);
 			}
 			
+			
+			if(useCorpus){
+				List<Revision> corpusRelevantRevisions = new ArrayList<Revision>();
+				for(int index = 0 ; index < revisions.size() ; index++){
+					if(corpusRevisions.contains(revisions.get(index).getId())){
+						corpusRelevantRevisions.addAll(revisions.subList(index-10, index+11));
+					}
+				}
+				if(corpusRelevantRevisions.isEmpty()){
+					return;
+				} else {
+					revisions = corpusRelevantRevisions;
+					filter = false;
+				}
+			}
+			
 			Contributor curr, next;
-			
 			int newIndex = 0;
-			
-			for(int currPosition = 0 ; currPosition < page.getRevisions().size() ; currPosition++){
+
+			for(int currPosition = 0 ; currPosition < revisions.size() ; currPosition++){
 				
-				curr = page.getRevisions().get(currPosition).getContributor();
+				if(revisions.get(currPosition).getTimestamp().getYear() > limitYear){
+					return;
+				}
+				
+				curr = revisions.get(currPosition).getContributor();
 				next = null;
-				
 				Editor currEditor = null;
 				
 				/* TODO filter double anonymous editors?
 				 */
 				if(filter){
-					
-					if(currPosition < page.getRevisions().size() - 1){
-	
+					if(currPosition < revisions.size() - 1){
 						addPage = false;
-						next = page.getRevisions().get(currPosition + 1).getContributor();
+						next = revisions.get(currPosition + 1).getContributor();
 					}
 					
 					if(curr == null){
-						
 						//anonymous
-						String ip = page.getRevisions().get(currPosition).getContributorIp();
+						String ip = revisions.get(currPosition).getContributorIp();
 						currEditor = new Editor(ip , BigInteger.ZERO);
 						editors.put(ip, currEditor);
 						addPage = true;
@@ -231,14 +258,11 @@ public class InputReader {
 							(curr.getId() != null) &&
 							(next.getId() != null) &&
 							(curr.getId().equals(next.getId()))){
-						
 						//filtered
-						page.getRevisions().remove(currPosition);
+						revisions.remove(currPosition);
 						currPosition--;
 						addPage = false;
-						
 					} else {
-						
 						//registered
 						if(editors.containsKey(curr.getUsername())){
 							currEditor = editors.get(curr.getUsername());
@@ -246,37 +270,29 @@ public class InputReader {
 							currEditor = new Editor(curr.getUsername(), curr.getId());
 							editors.put(curr.getUsername(), currEditor);
 						}
-						
 						addPage = true;
 					}
-					
 				} else {
-					
 					addPage = true;
 				}
-					
 				if(addPage){
-					
-					RevisionID id = new RevisionID(page.getRevisions().get(currPosition), currEditor, newIndex, page.getTitle());
-
+					RevisionID id = new RevisionID(revisions.get(currPosition), currEditor, newIndex, page.getTitle());
 					try {
-						engProcessedPages.put(id, engine.postprocess(pageId, page.getRevisions().get(currPosition).getText(), null));
+						wikiTexts.put(id, revisions.get(currPosition).getText());
+						engProcessedPages.put(id, engine.postprocess(pageId, revisions.get(currPosition).getText(), null));
 					
 					} catch (EngineException e) {
 						logger.error("EngProcessedPage could not be generated.", e);
 						engProcessedPages.put(id, null);
 					}
-					
 					newIndex++;
 				}
-				
 				if(MAX_REVISIONS+1 <= engProcessedPages.keySet().stream().filter(id -> id.getPageTitle().equals(page.getTitle())).count()){
 					break;
 				}
 			}
-			logger.info("Filtered "+(originalSize - page.getRevisions().size())+" revisions in \""+page.getTitle()+"\".");
+			logger.info("Filtered "+(originalSize - revisions.size())+" revisions in \""+page.getTitle()+"\".");
 		}
 	}
-
 }
 

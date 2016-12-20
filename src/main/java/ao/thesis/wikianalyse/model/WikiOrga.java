@@ -66,6 +66,13 @@ public interface WikiOrga {
 	 */
 	public EngProcessedPage getEngProcessedPage(RevisionID id);
 	
+	/** Getter for preprocessed wiki text.
+	 * 
+	 * @param id	- revision id
+	 * @return associated wiki text
+	 */
+	public String getWikiText(RevisionID id);
+	
 	/** Getter for all EngProcessedPage objects associated with their id.
 	 * @return all revisions mapped to their EngProcessedPage
 	 */

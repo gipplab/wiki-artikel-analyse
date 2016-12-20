@@ -1,21 +1,21 @@
-Index,Pagetitle,Time,Editor,MathForm (ALL),NEs (ALL),Links (ALL),Categs (ALL),Files (ALL),Heads (ALL),MathForm (IN),NEs (IN),Links (IN),Categs (IN),Files (IN),Heads (IN),Insert Activities,Delete Activities,Move Activities,Update Activities,Edit Longevity
-0,David Siegel:(screenwriter),2008-10-22T20:08:47.000Z,Contributor7,0,6,7,5,0,4,0,6,7,5,0,4,124,0,0,0,0.8991935483870968
-1,David Siegel:(screenwriter),2008-10-23T07:20:22.000Z,RussBot,0,6,7,3,0,4,0,1,0,0,0,0,5,0,0,4,0.0
-2,David Siegel:(screenwriter),2008-11-13T15:21:46.000Z,207.144.99.125,0,8,7,3,0,4,0,2,0,0,0,0,0,0,0,0,0.0
-3,David Siegel:(screenwriter),2008-11-19T20:57:29.000Z,69200246188,0,6,7,3,0,4,0,0,0,0,0,0,47,9,4,3,-0.041666666666666664
-4,David Siegel:(screenwriter),2008-11-19T21:02:00.000Z,69200246188,0,8,17,7,0,10,0,3,10,4,0,7,41,4,4,4,1.0222222222222221
-5,David Siegel:(screenwriter),2009-08-07T15:52:20.000Z,All Hallow's Wraith,0,8,17,5,0,10,0,0,0,0,0,0,16,6,0,2,-0.35714285714285715
-6,David Siegel:(screenwriter),2010-05-13T02:25:40.000Z,Jesi,0,8,17,5,0,10,0,0,0,0,0,0,76,9,0,3,0.1917808219178082
-7,David Siegel:(screenwriter),2012-01-23T12:40:19.000Z,Rich Farmbrough,0,4,17,9,0,10,0,0,0,7,0,0,70,10,0,3,0.7894736842105263
-8,David Siegel:(screenwriter),2012-08-25T18:14:43.000Z,HuPi,0,7,17,9,0,10,0,3,0,0,0,0,99,0,0,5,0.04433497536945813
-9,David Siegel:(screenwriter),2012-09-11T16:34:43.000Z,72.229.19.102,0,10,18,10,0,10,0,4,8,1,0,0,105,0,0,7,0.8018433179723502
-10,David Siegel:(screenwriter),2012-10-11T19:15:44.000Z,50.47.55.60,0,10,24,10,0,10,0,0,6,0,0,0,0,0,0,0,0.0
-11,David Siegel:(screenwriter),2012-10-11T19:17:42.000Z,Pjthepiano,0,10,18,10,0,10,0,0,0,0,0,0,4,15,1,0,-0.5357142857142857
-12,David Siegel:(screenwriter),2012-11-18T00:50:23.000Z,85.81.82.15,0,10,19,10,0,10,0,0,0,0,0,0,0,9,0,3,0.2857142857142857
-13,David Siegel:(screenwriter),2012-11-18T02:39:41.000Z,WLU,0,7,18,10,0,10,0,0,0,0,0,0,7,17,1,11,-0.35
-14,David Siegel:(screenwriter),2012-12-16T00:35:31.000Z,Ser Amantio di Nicolao,0,8,18,10,0,10,0,2,0,1,0,0,6,2,2,11,0.92
-15,David Siegel:(screenwriter),2013-03-24T17:13:14.000Z,Waacstats,0,8,18,10,0,10,0,0,0,0,0,0,0,6,0,2,0.0
-16,David Siegel:(screenwriter),2013-05-02T10:23:07.000Z,All Hallow's Wraith,0,8,18,10,0,10,0,0,0,0,0,0,0,6,0,2,-0.35714285714285715
-17,David Siegel:(screenwriter),2013-08-08T22:08:58.000Z,72.229.8.103,0,8,18,10,0,10,0,0,0,0,0,0,0,4,0,1,0.1111111111111111
-18,David Siegel:(screenwriter),2013-08-09T19:55:20.000Z,R'n'B,0,8,18,10,0,10,0,0,0,0,0,0,388,25,5,3,0.0
-19,David Siegel:(screenwriter),2015-01-09T17:57:32.000Z,Camera-On,0,10,26,10,0,16,0,3,12,0,0,3,0,0,0,0,0.0
+Index,Pagetitle,Time,Editor,TextDQ (IN),Edit Longevity,Vandalism?
+0,David Siegel:(screenwriter),2008-10-22T20:08:47.000Z,Contributor7,0.9371534696820377,0.8991935483870968,0
+1,David Siegel:(screenwriter),2008-10-23T07:20:22.000Z,RussBot,0.6707908419708387,0.0,0
+2,David Siegel:(screenwriter),2008-11-13T15:21:46.000Z,207.144.99.125,0.0,0.08333333333333333,0
+3,David Siegel:(screenwriter),2008-11-19T20:57:29.000Z,69200246188,0.0,-0.3333333333333333,0
+4,David Siegel:(screenwriter),2008-11-19T21:02:00.000Z,69200246188,0.9260449780197094,0.92,0
+5,David Siegel:(screenwriter),2009-08-07T15:52:20.000Z,All Hallow's Wraith,0.0,-0.8333333333333334,0
+6,David Siegel:(screenwriter),2010-05-13T02:25:40.000Z,Jesi,0.9045027644965619,0.8235294117647058,0
+7,David Siegel:(screenwriter),2012-01-23T12:40:19.000Z,Rich Farmbrough,0.9556230930606746,0.9130434782608695,0
+8,David Siegel:(screenwriter),2012-08-25T18:14:43.000Z,HuPi,0.7715601549071072,0.5,0
+9,David Siegel:(screenwriter),2012-09-11T16:34:43.000Z,72.229.19.102,0.9385363187240768,0.93048128342246,0
+10,David Siegel:(screenwriter),2012-10-11T19:15:44.000Z,50.47.55.60,0.0,0.5,0
+11,David Siegel:(screenwriter),2012-10-11T19:17:42.000Z,Pjthepiano,0.0,-0.5,0
+12,David Siegel:(screenwriter),2012-11-18T00:50:23.000Z,85.81.82.15,0.0,0.6,0
+13,David Siegel:(screenwriter),2012-11-18T02:39:41.000Z,WLU,0.0,-0.42424242424242425,0
+14,David Siegel:(screenwriter),2012-12-16T00:35:31.000Z,Ser Amantio di Nicolao,0.8618765610854201,0.9583333333333334,0
+15,David Siegel:(screenwriter),2013-03-24T17:13:14.000Z,Waacstats,0.7957901900704205,0.0,0
+16,David Siegel:(screenwriter),2013-05-02T10:23:07.000Z,All Hallow's Wraith,0.7627009844794012,-0.38461538461538464,0
+17,David Siegel:(screenwriter),2013-08-08T22:08:58.000Z,72.229.8.103,0.0,1.0,0
+18,David Siegel:(screenwriter),2013-08-09T19:55:20.000Z,R'n'B,0.5002454622667944,-0.5,0
+19,David Siegel:(screenwriter),2015-01-09T17:57:32.000Z,Camera-On,0.0,0.0,0
