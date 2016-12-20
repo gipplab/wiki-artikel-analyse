@@ -32,6 +32,8 @@ public class WikiOrgaImpl implements WikiOrga {
 	
 	private Map<RevisionID, EngProcessedPage> engProcessedPages;
 	
+	private Map<RevisionID, String> wikiTexts;
+	
 	private UserGroupReader userGroupReader;
 	
 	/**
@@ -55,6 +57,13 @@ public class WikiOrgaImpl implements WikiOrga {
 		this.revisionIds=revisionIds;
 	}
 	
+	/**
+	 * For reproduktion, used by InputReader
+	 */
+	public void setWikiTexts(Map<RevisionID, String> wikiTexts) {
+		this.wikiTexts=wikiTexts;
+	}
+	
 	
 	public void setUsergroupReader(UserGroupReader userGroupReader) {
 		this.userGroupReader=userGroupReader;
@@ -62,15 +71,15 @@ public class WikiOrgaImpl implements WikiOrga {
 	
 
 	@Override
-	public List<RevisionID> getSortedHistory(String pageTitle) {
+	public List<RevisionID> getSortedHistory(String pageTitle) {		
 		return revisionIds.stream()
-			.filter(id -> id.getPageTitle().equals(pageTitle))
-			.sorted(new Comparator<RevisionID>(){
-				@Override
-				public int compare(RevisionID id1, RevisionID id2) {
-					return id1.compareTo(id2);
-				}})
-			.collect(Collectors.toList());
+				.filter(id -> id.getPageTitle().equals(pageTitle))
+				.sorted(new Comparator<RevisionID>(){
+					@Override
+					public int compare(RevisionID id1, RevisionID id2) {
+						return id1.compareTo(id2);
+					}})
+				.collect(Collectors.toList());
 	}
 
 	@Override
@@ -175,6 +184,11 @@ public class WikiOrgaImpl implements WikiOrga {
 	@Override
 	public EngProcessedPage getEngProcessedPage(RevisionID id) {
 		return engProcessedPages.get(id);
+	}
+	
+	@Override
+	public String getWikiText(RevisionID id) {
+		return wikiTexts.get(id);
 	}
 
 	@Override

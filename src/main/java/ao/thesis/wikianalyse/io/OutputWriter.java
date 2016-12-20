@@ -67,9 +67,8 @@ public class OutputWriter {
 		writeFile("/"+newtitle+"/"+folder+"/Rating.csv", builder.buildTimeline(ratings, ratingheadlines));
 	}
 
-	public void writeTimelineOutput(Map<RevisionID, String[]> allratings, String[] ratingheadlines, String title) {
-		String newtitle = title.replaceAll("[^\\w\\-]", "_");
-		writeFile("/"+newtitle+"/Timeline.csv", builder.buildTimeline(allratings, ratingheadlines));
+	public void writeTimelineOutput(Map<RevisionID, String[]> allratings, String[] ratingheadlines) {
+		writeFile("/Timeline.csv", builder.buildTimeline(allratings, ratingheadlines));
 	}
 
 //	public void writeEditorOutput(Map<RevisionID, String[]> ratings, String[] ratingheadlines, String title) {

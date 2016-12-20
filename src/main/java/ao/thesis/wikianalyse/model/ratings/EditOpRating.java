@@ -46,10 +46,10 @@ public class EditOpRating implements Rating {
 	
 	public static final String[] revRatingHeadlines() {
 		return new String[] {
-				"Insert Activities",
-				"Delete Activities",
-				"Move Activities",
-				"Update Activities",
+//				"Insert Activities",
+//				"Delete Activities",
+//				"Move Activities",
+//				"Update Activities",
 				"Edit Longevity"
 				};
 	}
@@ -57,10 +57,10 @@ public class EditOpRating implements Rating {
 	@Override
 	public String[] buildOutputLine() {
 		return new String[] {
-			String.valueOf(insertedWords),
-			String.valueOf(deletedWords),
-			String.valueOf(movedWords),
-			String.valueOf(updatedWords),
+//			String.valueOf(insertedWords),
+//			String.valueOf(deletedWords),
+//			String.valueOf(movedWords),
+//			String.valueOf(updatedWords),
 			String.valueOf(editLongevity)
 		};
 	}

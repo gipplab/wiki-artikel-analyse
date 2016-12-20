@@ -81,7 +81,7 @@ public class TextPersistenceRatingSystem extends RatingSystem {
 	public void process() {
 		
 //		uncomment to write sweble edit ratings as well
-//		mcrs.process();  
+		mcrs.process();  
 		
 		Map<RevisionID, Rating> ratings = new HashMap<RevisionID, Rating>(orga.getRevisionIds().size());
 		

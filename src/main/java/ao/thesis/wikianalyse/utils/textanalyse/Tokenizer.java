@@ -35,23 +35,45 @@ public class Tokenizer {
 		this.logger = logger;
 	}
 	
+	/** For reproduction purpose.
+	 * 
+	 * @param wikiText			- preprocessed revision text
+	 * @param sourceID			- revision id
+	 * @param filterStopWords
+	 */
+	public List<Token> tokenize(String wikiText, RevisionID sourceID, boolean filterStopWords) {
+		
+		logger.info("Tokenize Wiki Text on index "+sourceID.getIndex()+" with ID "+sourceID.getId());
+		
+		List<Token> tokenizedRevision = new ArrayList<Token>();
+		for(String word : wikiText.split("\\s+")){
+			tokenizedRevision.add(new MarkupToken(word, Markup.TEXT, ""));
+		}
+		tokenizedRevision.stream().forEach(o -> o.setSourceId(sourceID));
+		
+		if(filterStopWords){
+			tokenizedRevision.stream()
+				.filter(o -> stopWords.contains(o.getText()))
+				.forEach(o -> o.setSourceId(RevisionID.getNullRevision(sourceID.getPageTitle())));
+		}
+		return tokenizedRevision;
+	}
+	
 	/**Tokenizes the given revision, sets named entities if possible and sets the given id as 
 	 * source revision for all tokens. For stop words all sources are replaced with an empty revision id.
 	 * 
 	 * @param epp		- EngProcessedPage object of the revision
 	 * @param id		- id object of the revision
 	 */
-	public List<Token> tokenize(EngProcessedPage epp, RevisionID sourceID, boolean setNEs, boolean filterSWs){
+	public List<Token> tokenize(EngProcessedPage epp, RevisionID sourceID, boolean setNEs, boolean filterStopWords){
 		
 		logger.info("Tokenize revision on index "+sourceID.getIndex()+" with ID "+sourceID.getId());
 		
 		TextConverter converter = new TextConverter();
-		
 		List<Token> tokenizedRevision = (List<Token>) converter.go(epp.getPage());
-		
 		tokenizedRevision.stream().forEach(o -> o.setSourceId(sourceID));
 		
-		if(filterSWs){
+		if(filterStopWords){
 			tokenizedRevision.stream()
 				.filter(o -> ((o instanceof MarkupToken) && (stopWords.contains(o.getText()))))
 				.forEach(o -> o.setSourceId(RevisionID.getNullRevision(sourceID.getPageTitle())));

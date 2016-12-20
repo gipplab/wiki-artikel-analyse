@@ -19,7 +19,7 @@ public class RatingBuilder {
 	
 	private TreeMap<RevisionID, List<Rating>> ratings;
 	
-	private int size = 0;
+	private int size = 0; //number of ratings for each revision
 	
 	private String[] headlines = new String[0];
 	
@@ -37,18 +37,16 @@ public class RatingBuilder {
 	 * @return true if every revision was rated, else false.
 	 */
 	public boolean rateRevisions(Map<RevisionID, Rating> ratings, String[] headlines){
-		if(ratings.keySet().containsAll(this.ratings.keySet())){ //ensures that every revision gets a Rating
-			
+		if(ratings.keySet().containsAll(this.ratings.keySet())){ //ensures that every revision is rated
 			ratings.entrySet().stream().forEach(e -> addRatings(e.getKey(), e.getValue()));
-			updateHeadlines(headlines);
-			
+			addHeadlines(headlines);
 			size++;
 			return true;
 		} else 
 			return false;
 	}
 	
-	private void updateHeadlines(String[] headlines){
+	public void addHeadlines(String[] headlines){
 		if(headlines.length == 0){
 			this.headlines = headlines;
 		} else {
@@ -60,24 +58,22 @@ public class RatingBuilder {
 		ratings.get(id).add(rating);
 	}
 	
+	/** Returns the reputation value of the rating at the given index.
+	 * @param id			- rated id
+	 * @param ratingIndex	- rating index
+	 * @return
+	 */
 	public double getJudgingMeasureResult(RevisionID id, int ratingIndex) {
 		return ratings.get(id).get(ratingIndex).getReputationMeasureResult();
 	}
-
 	
-//	/** Getter for ratings of all revisions in the given list.
-//	 * @param ids		- list of revision ids
-//	 * @return rating list
-//	 */
-//	public List<List<Rating>> getAllRatings(List<RevisionID> ids) {
-//		return ids.stream()
-//				.sorted(new Comparator<RevisionID>(){
-//					@Override
-//					public int compare(RevisionID id1, RevisionID id2) {
-//						return id1.compareTo(id2);
-//					}})
-//				.map(id -> getRatings(id)).collect(Collectors.toList());
-//	}
+	/** Getter for ratings of all revisions in the given list.
+	 * @param ids		- list of revision ids
+	 * @return rating list
+	 */
+	public TreeMap<RevisionID, List<Rating>> getRatings(List<RevisionID> ids) {
+		return ratings;
+	}
 	
 //	/** Getter for all ratings of one (registered) editor.
 //	 * @param editorid	- id of an editor
