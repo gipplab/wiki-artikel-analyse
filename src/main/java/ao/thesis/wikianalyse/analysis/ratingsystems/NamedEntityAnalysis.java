@@ -44,8 +44,11 @@ public class NamedEntityAnalysis implements Analysis{
 			PreprocessedRevision target = history.getRevision(i);
 			List<PreprocessedRevision> sources = history.getJudgedRevisions(i, 10);
 			
-//			Matching.matchNEBagOfWords((NERevision)target, (List)sources);
-			Matching.matchNEsWithGreedy((NERevision)target, (List)sources, matcher);
+			//usage: TextConverter
+			Matching.matchNEBagOfWords((NERevision)target, (List)sources);
+			
+			//usage: TextConverterWithStringTokens
+//			Matching.matchNEsWithGreedy((NERevision)target, (List)sources, matcher);
 		}
 		return prepRevisions;
 	}

@@ -20,7 +20,6 @@ import ao.thesis.wikianalyse.analysis.preprocession.matcher.utils.PrefixHashMapB
 import ao.thesis.wikianalyse.analysis.preprocession.tokenization.StringTokenizer;
 import ao.thesis.wikianalyse.analysis.preprocession.tokenization.entitytokenizer.NETokenizer;
 import ao.thesis.wikianalyse.analysis.preprocession.tokenization.markupstringtokenizer.MarkupStringTokenizer;
-import ao.thesis.wikianalyse.analysis.preprocession.tokenization.tokens.NEToken;
 import ao.thesis.wikianalyse.analysis.preprocession.tokenization.tokens.StringToken;
 import ao.thesis.wikianalyse.analysis.preprocession.tokenization.tokens.Token;
 import ao.thesis.wikianalyse.utils.SwebleException;

@@ -35,7 +35,7 @@ import de.fau.cs.osr.utils.visitor.VisitingException;
  * @author Anna Opaska
  *
  */
-public class WikiTrustDataOutputWriter {
+public class WikiTrustDataOutputWriter implements OutputWriter{
 	
 	private static final Logger LOGGER = Logger.getLogger(WikiTrustDataOutputWriter.class);
 	
@@ -113,15 +113,15 @@ public class WikiTrustDataOutputWriter {
 		try {
 			
 			// Edit longevity for three judges
-			ProcessedRevision[] judges;
-			if(judge.getJudging().length > 3){
-				judges = new ProcessedRevision[]{
-						judge.getJudging()[0],
-						judge.getJudging()[1],
-						judge.getJudging()[2]};
-			} else {
-				judges = judge.getJudging();
-			}
+//			ProcessedRevision[] judges;
+//			if(judge.getJudging().length > 3){
+//				judges = new ProcessedRevision[]{
+//						judge.getJudging()[0],
+//						judge.getJudging()[1],
+//						judge.getJudging()[2]};
+//			} else {
+//				judges = judge.getJudging();
+//			}
 			
 			outputLine[TL_EL]= String.valueOf(EditRating.calculateAverageEditLongevity(judge, judge.getPrev(), judge.getJudging(), judge.getPageTitle()));
 		} catch (VisitingException | SwebleException e) {

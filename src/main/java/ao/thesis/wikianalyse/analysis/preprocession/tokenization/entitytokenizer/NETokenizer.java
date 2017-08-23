@@ -16,10 +16,6 @@ public class NETokenizer {
 //	private TextConverterWithStringTokens converter = null;
 	private TextConverter converter = null;
 	
-	public TextConverter getTextConverter() {
-	return converter;
-}
-	
 	public void setClassifier(CRFClassifier<CoreLabel> classifier) {
 		this.classifier=classifier;
 	}

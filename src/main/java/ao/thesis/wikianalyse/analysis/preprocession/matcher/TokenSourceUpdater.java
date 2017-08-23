@@ -54,6 +54,12 @@ public class TokenSourceUpdater {
 					Token copyToken = (Token) curr.getElements().get(tPosition);
 					
 					copyToken.setSourceId(originalToken.getSourceId());
+					
+////					if(copyToken instanceof MathFormulaToken && originalToken instanceof MathFormulaToken){
+//						for(int i = 0; i < ((MathFormulaToken)copyToken).getElements().size(); i++){
+//							((Token)((MathFormulaToken)copyToken).getElements().get(i)).setSourceId(((Token)((MathFormulaToken)originalToken).getElements().get(i)).getSourceId());
+//						}
+////					}
 				}	
 			}
 			

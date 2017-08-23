@@ -480,7 +480,7 @@ public class TextConverter
 			end = 0;
 			while((start = textWithXML.indexOf("<ORGANIZATION>", start)) != -1){
 				end = textWithXML.indexOf("</ORGANIZATION>", start);
-				String namedEntityText = textWithXML.substring(start+13, end);
+				String namedEntityText = textWithXML.substring(start+14, end);
 				
 				List<StringToken> elements = new LinkedList<StringToken>();
 				String[] words = namedEntityText.split(wspunctPattern);

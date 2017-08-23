@@ -11,6 +11,9 @@ import ao.thesis.wikianalyse.analysis.ratingsystems.NamedEntityAnalysis;
 import ao.thesis.wikianalyse.analysis.ratingsystems.WikiTrustAnalysis;
 import ao.thesis.wikianalyse.io.input.InputReader;
 import ao.thesis.wikianalyse.io.input.StopWordReader;
+import ao.thesis.wikianalyse.io.output.NEDataOutputWriter;
+import ao.thesis.wikianalyse.io.output.OutputWriter;
+import ao.thesis.wikianalyse.io.output.WikiTrustDataOutputWriter;
 import edu.stanford.nlp.ie.crf.CRFClassifier;
 
 public class Main {
@@ -37,6 +40,7 @@ public class Main {
 	private static String classifier4ClassPath = System.getProperty("user.dir")+"/resources/classifiers/english.conll.4class.distsim.crf.ser.gz";
 	
 	private static Analysis analysis;
+	private static OutputWriter writer;
 	private static DateTime readlimitDate;
 	private static int limitRevisions;
 	private static int limitArticles;
@@ -46,9 +50,8 @@ public class Main {
 	
 	public static void main(String[] args) throws Exception{
 		
-//		setupEngTryout();
 //		setupItReproduction();
-		
+//		setupNE();
 		setupEng();
 		
 		InputReader reader = null;
@@ -57,7 +60,7 @@ public class Main {
 			LOGGER.info("Start Analysis");
 			
 			timeStart = System.currentTimeMillis();
-			reader = new InputReader(DEF_INPUT_DIR, analysis, readlimitDate, limitRevisions, limitArticles);
+			reader = new InputReader(DEF_INPUT_DIR, analysis, writer, readlimitDate, limitRevisions, limitArticles);
 			reader.read();
 			
 			LOGGER.info("Analysis Time: "+ (System.currentTimeMillis() - timeStart) + " ms.");
@@ -92,6 +95,7 @@ public class Main {
 	private static void setupItReproduction(){
 		List<String> stopWords = setupStopWords(IT_STOPWORDS);
 		analysis = new WikiTrustAnalysis(stopWords);
+		writer = new WikiTrustDataOutputWriter("Timeline");
 		readlimitDate = new DateTime(2005, 12, 11, 23, 59);
 		limitRevisions = 1000000000;
 		limitArticles = 1000000000;
@@ -101,6 +105,7 @@ public class Main {
 	private static void setupEng(){
 		List<String> stopWords = setupStopWords(ENG_STOPWORDS);
 		analysis = new WikiTrustAnalysis(stopWords);
+		writer = new WikiTrustDataOutputWriter("Timeline");
 		readlimitDate = new DateTime(2017, 12, 31, 23, 59);
 		limitRevisions = 1000000000;
 		limitArticles = 1000;
@@ -115,6 +120,7 @@ public class Main {
 			LOGGER.error("No classifier found.");
 		}
 		
+		writer = new NEDataOutputWriter("NETimeline");
 		readlimitDate = new DateTime(2017, 12, 31, 23, 59);
 		limitRevisions = 1000000000;
 		limitArticles = 1000;

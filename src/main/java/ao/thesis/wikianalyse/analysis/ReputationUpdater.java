@@ -41,7 +41,7 @@ public class ReputationUpdater {
 	public void readTimelineAndUpdateReputation(){
 		
 		try (
-			FileReader reader = new FileReader(new File(Main.DEF_INPUT_DIR+"/SortedDreiTimeline.csv"));
+			FileReader reader = new FileReader(new File(Main.DEF_INPUT_DIR+"/itwiki_reputationdata.csv"));
 			BufferedReader br = new BufferedReader(reader);
 			FileWriter fileA = new FileWriter(Main.DEF_OUTPUT_DIR + "/PrecisionRecallData_a.csv", true);
 			CSVWriter writerA = new CSVWriter(fileA);

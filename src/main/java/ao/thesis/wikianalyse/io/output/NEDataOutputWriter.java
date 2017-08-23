@@ -14,7 +14,7 @@ import ao.thesis.wikianalyse.analysis.datatypes.ProcessedRevision;
 import ao.thesis.wikianalyse.analysis.procession.TextRating;
 import au.com.bytecode.opencsv.CSVWriter;
 
-public class NEDataOutputWriter {
+public class NEDataOutputWriter implements OutputWriter{
 	
 	private static final Logger LOGGER = Logger.getLogger(NEDataOutputWriter.class);
 	private final String dir;
