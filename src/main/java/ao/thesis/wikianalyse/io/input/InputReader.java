@@ -24,13 +24,10 @@ import ao.thesis.wikianalyse.analysis.datatypes.PreprocessedRevision;
 import ao.thesis.wikianalyse.analysis.datatypes.ProcessedRevision;
 import ao.thesis.wikianalyse.analysis.preprocession.PreprocessionException;
 import ao.thesis.wikianalyse.analysis.procession.ProcessionException;
-import ao.thesis.wikianalyse.analysis.ratingsystems.NamedEntityAnalysis;
-import ao.thesis.wikianalyse.io.output.NEDataOutputWriter;
+import ao.thesis.wikianalyse.io.output.OutputWriter;
 import ao.thesis.wikianalyse.io.output.TokenOutputWriter;
-import ao.thesis.wikianalyse.io.output.WikiTrustDataOutputWriter;
 import ao.thesis.wikianalyse.utils.SwebleException;
 import ao.thesis.wikianalyse.utils.SwebleUtils;
-import edu.stanford.nlp.ie.crf.CRFClassifier;
 
 
 public class InputReader {
@@ -40,6 +37,7 @@ public class InputReader {
 	private final String dir;
 	
 	private final Analysis analysis;
+	private final OutputWriter writer;
 	
 	private final DateTime limitReadingDate;
 	private final int limitRevisions;
@@ -50,6 +48,7 @@ public class InputReader {
 	
 	public InputReader(String dir, 
 			Analysis analysis, 
+			OutputWriter writer, 
 			DateTime limitReadingDate,
 			int limitRevisions,  
 			int limitArticles) {
@@ -62,6 +61,7 @@ public class InputReader {
 		
 		this.dir=dir;
 		this.analysis=analysis;
+		this.writer=writer;
 		this.limitReadingDate=limitReadingDate;
 		this.limitRevisions=limitRevisions;
 		this.limitArticles=limitArticles;
@@ -120,11 +120,7 @@ public class InputReader {
 		
 		private final Filter filter = new Filter(limitReadingDate);
 		
-		private final WikiTrustDataOutputWriter writer = new WikiTrustDataOutputWriter("Timeline");
-		
-		private final NEDataOutputWriter newriter = new NEDataOutputWriter("NETimeline");
-		
-		private final BarnstarReader barnstarReader = new BarnstarReader("Barnstars");
+//		private final BarnstarReader barnstarReader = new BarnstarReader("Barnstars");
 		
 		private int pageCounter = 0;
 		
@@ -133,8 +129,6 @@ public class InputReader {
 		private WikipediaXMLDumpReader(InputStream stream, Logger logger, String dir) 
 				throws Exception{
 			super(stream, StandardCharsets.UTF_8, dir, logger, true);
-			
-
 		}
 		
 		@Override
@@ -250,38 +244,29 @@ public class InputReader {
 		
 		private void analysePage(List<Revision> revisions, PageTitle title) throws RevisionLimitException{
 
-			List<ProcessedRevision> procRevisions = null;		
-			List<ProcessedRevision> neProcRevisions = null;
+			List<ProcessedRevision> procRevisions = null;
 			try {
 				if(pageCounter > limitArticles || revisionCounter > limitRevisions){
 					throw new RevisionLimitException();
 				}
 				
 				List<PreprocessedRevision> preprocessedRevisions = analysis.preprocess(revisions, title);
-//				List<PreprocessedRevision> nePreprocessedRevisions = neanalysis.preprocess(revisions, title);
 				
-//				TokenOutputWriter.writeTokens(preprocessedRevisions, title);
+				TokenOutputWriter.writeTokens(preprocessedRevisions, title);
 				
 				procRevisions = analysis.process(preprocessedRevisions);
-//				neProcRevisions = neanalysis.process(nePreprocessedRevisions);
 				
 			} catch (PreprocessionException e) {
 				LOGGER.warn("Page could not be preprocessed: "+title, e);
 				procRevisions=null;
-				neProcRevisions=null;
 				
 			} catch (ProcessionException e) {
 				LOGGER.warn("Page could not be processed: "+title, e);
 				procRevisions=null;
-				neProcRevisions=null;
 				
 			} finally {
-				if(Objects.nonNull(procRevisions) 
-//						&& Objects.nonNull(neProcRevisions)
-						){
-					
+				if(Objects.nonNull(procRevisions)){
 					writer.writeRevisions(procRevisions, title);
-//					newriter.writeRevisions(neProcRevisions, title);
 				}
 			}
 		}

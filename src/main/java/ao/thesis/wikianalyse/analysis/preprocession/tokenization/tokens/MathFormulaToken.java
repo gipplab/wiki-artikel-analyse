@@ -26,7 +26,12 @@ public class MathFormulaToken extends ComplexToken {
 	
 	@Override
 	public String toString(){
-		return "MathT["+this.text+"]";
+		String text = "";
+		for(Object obj : super.getElements()){
+			Token token = (Token) obj;
+			text += token.getText() + " " + token.getSourceId() + "; ";
+		}
+		return text;
 	}
 	
 	@Override

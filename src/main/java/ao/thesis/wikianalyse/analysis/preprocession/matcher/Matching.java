@@ -135,26 +135,27 @@ public class Matching {
 				prevs.stream()
 					.map(rev -> rev.getMathFormulas()).collect(Collectors.toList()));
 		
-		for(MathFormulaToken formula : revision.getMathFormulas()){
-			Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-			for(Object obj : formula.getElements()){
-				Token token = (Token) obj;
-				
-				if(map.containsKey(token.getSourceId())){
-					map.put(token.getSourceId(), (Integer) map.get(token.getSourceId())+1);
-				} else {
-					map.put(token.getSourceId(), 1);
-				}
-			}
-			int fid = formula.getSourceId();
-			int biggest = 0;
-			for(Integer key : map.keySet()){
-				if(map.get(key) > biggest){
-					fid = map.get(key);
-				}
-			}
-			formula.setSourceId(fid);
-		}
+//		for(MathFormulaToken formula : revision.getMathFormulas()){
+//			Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+//			for(Object obj : formula.getElements()){
+//				Token token = (Token) obj;
+//				
+//				if(map.containsKey(token.getSourceId())){
+//					map.put(token.getSourceId(), (Integer) map.get(token.getSourceId())+1);
+//				} else {
+//					map.put(token.getSourceId(), 1);
+//				}
+//			}
+//			int fid = formula.getSourceId();
+//			int biggest = 0;
+//			for(Integer key : map.keySet()){
+//				if(map.get(key) > biggest){
+//					biggest = map.get(key);
+//					fid = key;
+//				}
+//			}
+//			formula.setSourceId(fid);
+//		}
 		
 	}
 	

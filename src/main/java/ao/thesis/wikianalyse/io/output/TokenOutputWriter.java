@@ -93,9 +93,15 @@ public class TokenOutputWriter {
 				CSVWriter mathwriter = new CSVWriter(mathfile);
 			) {
 				writer.writeAll(buildTokenOutput((List)revision.getMarkupSegmentedTokens()));
-				
+				List<String[]> output = new ArrayList<>();
 				if(revision.getMathFormulas() != null){
-					mathwriter.writeAll(buildTokenOutput((List)revision.getMathFormulas()));
+					
+					for(Token item : revision.getMathFormulas()){
+						for(Object token : ((MathFormulaToken)item).getElements()){
+							output.add(getTokenLine((Token)token, "math",((MathFormulaToken) item).getText()));
+						}
+					}
+					mathwriter.writeAll(output);
 				} else {
 					mathwriter.writeNext(new String[]{});
 				}
@@ -135,11 +141,11 @@ public class TokenOutputWriter {
 		for(Token item : tokens){
 
 			if(item instanceof MathFormulaToken){
-//				output.add(getTokenLine(item, "math",((MathFormulaToken) item).getText()));
+				output.add(getTokenLine(item, "math",((MathFormulaToken) item).getText()));
 				
-				for(Object token : ((MathFormulaToken)item).getElements()){
-					output.add(getTokenLine((Token)token, "math",((MathFormulaToken) item).getText()));
-				}
+//				for(Object token : ((MathFormulaToken)item).getElements()){
+//					output.add(getTokenLine((Token)token, "math",((MathFormulaToken) item).getText()));
+//				}
 				
 			} else if(item instanceof NEToken){
 				output.add(getTokenLine(item, ((NEToken) item).getEntity(), ((NEToken) item).getText()));
