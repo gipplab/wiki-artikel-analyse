@@ -83,7 +83,7 @@
 		<dependency>
 			<groupId>org.sweble.wikitext</groupId>
 			<artifactId>swc-engine</artifactId>
-			<version>2.1.0</version>
+			<version>3.1.5</version>
 		</dependency>
 		<dependency>
 			<groupId>org.sweble.wikitext</groupId>
@@ -133,12 +133,12 @@
 		<dependency>
 			<groupId>org.sweble.wom3</groupId>
 			<artifactId>sweble-wom3-swc-adapter</artifactId>
-			<version>2.2.0</version>
+			<version>3.1.5</version>
 		</dependency>
 		<dependency>
 			<groupId>de.fau.cs.osr.hddiff</groupId>
 			<artifactId>hddiff-perfsuite</artifactId>
-			<version>1.1.0</version>
+			<version>2.0.4</version>
 		</dependency>
 		<dependency>
 			<groupId>de.fau.cs.osr.hddiff</groupId>
@@ -173,7 +173,7 @@
 		<dependency>
     		<groupId>org.sweble.wikitext</groupId>
     		<artifactId>swc-example-dumpcruncher</artifactId>
-    		<version>2.2.0</version>
+    		<version>3.1.5</version>
 		</dependency>
 		<dependency>
    <groupId>org.apache.commons</groupId>
