@@ -148,7 +148,7 @@
 		<dependency>
     		<groupId>de.fau.cs.osr.utils</groupId>
     		<artifactId>utils</artifactId>
-    		<version>2.2.0</version>
+    		<version>3.0.7</version>
 		</dependency>
 		<dependency>
     		<groupId>junit</groupId>
